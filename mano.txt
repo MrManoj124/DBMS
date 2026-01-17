@@ -1,0 +1,232 @@
+[
+  {
+    "courseCode": "PM1113",
+    "courseName": "Principles of Management",
+    "courseUnit": 3,
+    "semester": "First",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": [],
+    "isActive": true
+  },
+  {
+    "courseCode": "PM1133",
+    "courseName": "Business Mathematics",
+    "courseUnit": 3,
+    "semester": "First",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": [],
+    "isActive": true
+  },
+  {
+    "courseCode": "PM1143",
+    "courseName": "Financial Accounting",
+    "courseUnit": 3,
+    "semester": "First",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": [],
+    "isActive": true
+  },
+  {
+    "courseCode": "PM1153",
+    "courseName": "Fundamentals of Project Management",
+    "courseUnit": 3,
+    "semester": "First",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": [],
+    "isActive": true
+  },
+  {
+    "courseCode": "ENG1113",
+    "courseName": "Proficiency in English – I",
+    "courseUnit": 3,
+    "semester": "First",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": true,
+    "prerequisites": [],
+    "isActive": true
+  },
+  {
+    "courseCode": "ACU1111",
+    "courseName": "Language for Integration",
+    "courseUnit": 1,
+    "semester": "First",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": true,
+    "prerequisites": [],
+    "isActive": true
+  },
+
+  {
+    "courseCode": "PM1213",
+    "courseName": "Project Scope Management",
+    "courseUnit": 3,
+    "semester": "Second",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": ["PM1153"],
+    "isActive": true
+  },
+  {
+    "courseCode": "PM1223",
+    "courseName": "Project Accounting",
+    "courseUnit": 3,
+    "semester": "Second",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": ["PM1143"],
+    "isActive": true
+  },
+  {
+    "courseCode": "PM1233",
+    "courseName": "Information and Communication Technology",
+    "courseUnit": 3,
+    "semester": "Second",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": [],
+    "isActive": true
+  },
+  {
+    "courseCode": "PM1243",
+    "courseName": "Business Statistics",
+    "courseUnit": 3,
+    "semester": "Second",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": ["PM1133"],
+    "isActive": true
+  },
+  {
+    "courseCode": "PM1253",
+    "courseName": "Project Appraisal",
+    "courseUnit": 3,
+    "semester": "Second",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": ["PM1153"],
+    "isActive": true
+  },
+
+  {
+    "courseCode": "PM2113",
+    "courseName": "Project Schedule Management",
+    "courseUnit": 3,
+    "semester": "First",
+    "level": "Level 2",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": ["PM1213"],
+    "isActive": true
+  },
+
+  {
+    "courseCode": "PM2233",
+    "courseName": "Project Quality Management",
+    "courseUnit": 3,
+    "semester": "Second",
+    "level": "Level 2",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": ["PM2113"],
+    "isActive": true
+  },
+
+  {
+    "courseCode": "PM3153",
+    "courseName": "Geographic Information System",
+    "courseUnit": 3,
+    "semester": "First",
+    "level": "Level 3",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": "",
+    "nonGPA": false,
+    "prerequisites": [],
+    "isActive": true
+  },
+
+  {
+    "courseCode": "PM4133",
+    "courseName": "Agile Project Management",
+    "courseUnit": 3,
+    "semester": "First",
+    "level": "Level 4",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": ["PM3213"],
+    "isActive": true
+  }
+]
+
+
+
+
+
+
+
+{
+    "courseCode": "PM1113",
+    "courseName": "Principles of Management",
+    "courseUnit": 3,
+    "semester": "First",
+    "level": "Level 1",
+    "faculty": "Business Faculty",
+    "department": "Project Management",
+    "course": " ",
+    "nonGPA": false,
+    "prerequisites": [],
+    "isActive": true
+  },
+  
+  
+  
+ based on this staff and student can be login with specific id'semester
+ example student-2021/ICT/74
+		 staff-Staff/FAS/12
+	could you update the code for these login credentials
+	also default password for those 2 users are same - uov2026user
+	after the successful login staff and student can be change the password as per their
+	need
