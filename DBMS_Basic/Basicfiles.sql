@@ -8,3 +8,11 @@ CREATE TABLE Customers (
     Email VARCHAR(100) UNIQUE,
     Phone VARCHAR(15)
 );
+
+CREATE TABLE Vehicles (
+    VehicleID INT PRIMARY KEY AUTO_INCREMENT,
+    Brand VARCHAR(50),
+    Model VARCHAR(50),
+    Year INT,
+    Status VARCHAR(20) DEFAULT 'Available'
+);
