@@ -16,3 +16,13 @@ CREATE TABLE Vehicles (
     Year INT,
     Status VARCHAR(20) DEFAULT 'Available'
 );
+
+CREATE TABLE Rentals (
+    RentalID INT PRIMARY KEY AUTO_INCREMENT,
+    CustomerID INT,
+    VehicleID INT,
+    RentDate DATE,
+    ReturnDate DATE,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (VehicleID) REFERENCES Vehicles(VehicleID)
+);
