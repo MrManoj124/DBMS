@@ -26,3 +26,5 @@ CREATE TABLE Rentals (
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
     FOREIGN KEY (VehicleID) REFERENCES Vehicles(VehicleID)
 );
+
+
