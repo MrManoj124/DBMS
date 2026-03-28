@@ -17,6 +17,7 @@ CREATE TABLE Vehicles (
     Status VARCHAR(20) DEFAULT 'Available'
 );
 
+
 CREATE TABLE Rentals (
     RentalID INT PRIMARY KEY AUTO_INCREMENT,
     CustomerID INT,
