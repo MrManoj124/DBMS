@@ -9,6 +9,7 @@ CREATE TABLE Customers (
     Phone VARCHAR(15)
 );
 
+
 CREATE TABLE Vehicles (
     VehicleID INT PRIMARY KEY AUTO_INCREMENT,
     Brand VARCHAR(50),
