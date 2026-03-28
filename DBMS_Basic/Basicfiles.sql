@@ -39,5 +39,5 @@ CREATE TABLE Payments (
 ///CRUD Operations
 ///Create(Insert Data)
 INSERT INTO Customers(Name, Email, Phone)
-
+VALUES
 
