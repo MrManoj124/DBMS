@@ -9,7 +9,6 @@ CREATE TABLE Customers (
     Phone VARCHAR(15)
 );
 
-
 CREATE TABLE Vehicles (
     VehicleID INT PRIMARY KEY AUTO_INCREMENT,
     Brand VARCHAR(50),
@@ -17,7 +16,6 @@ CREATE TABLE Vehicles (
     Year INT,
     Status VARCHAR(20) DEFAULT 'Available'
 );
-
 
 CREATE TABLE Rentals (
     RentalID INT PRIMARY KEY AUTO_INCREMENT,
@@ -27,6 +25,14 @@ CREATE TABLE Rentals (
     ReturnDate DATE,
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
     FOREIGN KEY (VehicleID) REFERENCES Vehicles(VehicleID)
+);
+
+CREATE TABLE Payments (
+    PaymentID INT PRIMARY KEY AUTO_INCREMENT,
+    RentalID INT,
+    Amount DECIMAL(10,2),
+    PaymentDate DATE,
+    FOREIGN KEY (RentalID) REFERENCES Rentals(RentalID)
 );
 
 
