@@ -143,3 +143,7 @@ SELECT DISTINCT PID FROM Shipments WHERE PrID IN (SELECT PrID FROM Projects WHER
 
 --Get all the supplier IDs with a status lower than supplier S1.
 SELECT SID FROM Suppliers WHERE Status < (SELECT Status FROM Suppliers WHERE SID = 'S1');
+
+--List all the supplier IDs and the number of different parts supplied by each supplier.
+SELECT SID, COUNT(DISTINCT PID) AS PartCount FROM Shipments GROUP BY SID;
+
