@@ -80,6 +80,11 @@ INSERT INTO Rentals(CustomerID, VehicleID, RentDate, ReturnDate) VALUES
 (3, 6, '2026-03-18', NOT NULL),
 (4, 7, '2026-02-14', '2026-02-24');
 
+INSERT INTO Payments (RentID, Amount, PaymentDate) VALUES
+(1, 25000.00, '2026-02-02'),
+(2, 15000.00, '2026-03-16'),
+(3, 20000.00, '2026-03-18'),
+(4, 18000.00, '2026-03-14');
 
 
 
