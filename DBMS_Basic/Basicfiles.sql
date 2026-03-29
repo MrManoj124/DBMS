@@ -41,3 +41,17 @@ CREATE TABLE Payments (
 INSERT INTO Customers(Name, Email, Phone)
 VALUES ('Manoj','manoj@gmail.com','072664165');
 
+INSERT INTO Customers(Name, Email, Phone)
+VALUES ('Rajeev','rajeev@gmail.com','0714625665');
+
+INSERT INTO Customers(Name, Email, Phone)
+VALUES ('Thanu','haran@gmail.com','0744589621');
+
+INSERT INTO Customers(Name, Email, Phone)
+VALUES('Kabijake','kabikuddi@gmail.com','0765428452');
+
+INSERT INTO Customers(Name, Email, Phone)
+VALUES('Ragul','ragul@gmail.com','0745166532');
+
+
+INs
