@@ -27,5 +27,11 @@ create table Shipments(
     PID varchar(10),
     PrID varchar(10),
     Quantity INT,
-    
+    CONSTRAINT fk_supplier
+        FOREIGN KEY(SID) REFERENCES Suppliers(SID)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_parts
+        FOREIGN KEY(PID) REFERENCES Parts(PID)
+        ON DELETE CASCADE)
 );
