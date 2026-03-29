@@ -94,3 +94,6 @@ INSERT INTO Shipments (SID, PID, PrID, Quantity) VALUES
 
 --Get Full details of all the projects in London
 SELECT * FROM Projects WHERE PrCity = 'London';
+
+--Get the range(300-750) of quality of Shipments
+SELECT * FROM Shipments WHERE Quantity BETWEEN 300 AND 750;
