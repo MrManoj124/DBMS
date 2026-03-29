@@ -15,3 +15,10 @@ create table Parts(
     Weight INT,
     PCity varchar(30), NOT NULL);
 )
+
+create table Projects(
+    PrID varchar(10) PRIMARY KEY,
+    PrName varchar(30) NOT NULL,
+    PrCity varchar(30) NOT NULL);
+)
+
