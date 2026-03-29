@@ -126,5 +126,7 @@ SELECT COUNT(DISTINCT PrID) FROM Shipments WHERE SID = 'S1';
 --Find the total quantity of parts supplied by supplier S5.
 SELECT SUM (Quantity) FROM Shipments WHERE SID = 'S5';
 
+--Get all the part IDs of parts which has been supplied to some project in an average quantity of more than 320.
+
 
 
