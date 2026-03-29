@@ -103,3 +103,6 @@ SELECT SID FROM Suppliers WHERE Status > 20;
 
 --Get SID who supply project J1 in Ascending order
 SELECT SID FROM Shipments WHERE PrID = 'J1' ORDER BY SID ASC;
+
+--Get all the suppliers names who supply part P2
+SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments WHERE PID = 'P2');
