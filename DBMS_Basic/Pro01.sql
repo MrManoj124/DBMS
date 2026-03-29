@@ -127,6 +127,7 @@ SELECT COUNT(DISTINCT PrID) FROM Shipments WHERE SID = 'S1';
 SELECT SUM (Quantity) FROM Shipments WHERE SID = 'S5';
 
 --Get all the part IDs of parts which has been supplied to some project in an average quantity of more than 320.
+SELECT PID FROM Shipments GROUP BY PID HAVING AVG(Quantity) > 320;
 
-
-
+--Get all the project IDs and cities where the city name has an “o”in the second letter.
+SELECT PrID, PrCity FROM Projects WHERE PrCity LIKE '_0%';
