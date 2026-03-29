@@ -123,5 +123,8 @@ WHERE NOT (s.SCity = p.PCity AND p.PCity = j.PrCity);
 --Find the total number of projects supplied by supplier S1.
 SELECT COUNT(DISTINCT PrID) FROM Shipments WHERE SID = 'S1';
 
---
+--Find the total quantity of parts supplied by supplier S5.
+SELECT SUM (Quantity) FROM Shipments WHERE SID = 'S5';
+
+
 
