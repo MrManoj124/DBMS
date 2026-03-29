@@ -108,4 +108,7 @@ SELECT SID FROM Shipments WHERE PrID = 'J1' ORDER BY SID ASC;
 SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments WHERE PID = 'P2');
 
 --Get all the suppliers name such that more than one suppliers are living in the same location
-SELECT SName FROM Suppliers WHERE SID NOT IN (SELECT SID FROM Shipments WHERE PID = 'P2')
+SELECT SName FROM Suppliers WHERE SCity IN (SELECT SCity FROM Suppliers GROUP BY SCity HAVING COUNT(*) > 1);
+
+--Get all the supplier names who do not supply part P2
+SELECT SName FROM Suppliers WHERE SID NOT IN (SELECT SID FROM Shipments WHERE PID = 'P2');
