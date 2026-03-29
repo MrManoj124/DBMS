@@ -62,6 +62,15 @@ INSERT INTO Customers(Name, Email, Phone)
 VALUES('Ragul','ragul@gmail.com','0745166532');
 
 
-INSERT INTO Vehicles(Brand, Model, Year)
-VALUES ('BMW','X5','2020');
+INSERT INTO Vehicles (Brand, Model, Year, Status) VALUES
+('Tata', 'Nexon', 2022, 'Available'),
+('Mahindra', 'XUV700', 2023, 'Available'),
+('Toyota', 'Corolla', 2021, 'Rented'),
+('Honda', 'Civic', 2020, 'Available'),
+('Suzuki', 'Swift', 2022, 'Maintenance'),
+('Hyundai', 'Elantra', 2021, 'Available'),
+('BMW', 'X5', 2023, 'Rented'),
+('Audi', 'A4', 2022, 'Available'),
+('Nissan', 'Altima', 2020, 'Available'),
+('Ford', 'Mustang', 2021, 'Rented');
 
