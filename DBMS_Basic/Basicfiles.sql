@@ -108,4 +108,6 @@ SELECT Brand, Model FROM Vehicles;
 UPDATE Vehicles SET Status = 'Rented' WHERE VehicleID = 4;
 
 
+--DELETE Operation--
+DELETE FROM Vehiles WHERE VehicleID = 4;
 
