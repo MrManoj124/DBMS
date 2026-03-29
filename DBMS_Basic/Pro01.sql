@@ -137,3 +137,6 @@ SELECT PrName FROM Projects WHERE PrID IN (SELECT PrID FROM Shipments WHERE SID 
 
 --Get the total quantity of parts supplied total for each projects
 SELECT PrID, SUM(Quantity) AS TotalQuantity FROM Shipments GROUP BY PrID;
+
+--Get all part IDs which has been supplied to any project in London.
+SELECT DISTINCT PID FROM Shipments WHERE PrID IN (SELECT PrID FROM Projects WHERE PrCity = 'London');
