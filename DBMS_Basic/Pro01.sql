@@ -131,3 +131,6 @@ SELECT PID FROM Shipments GROUP BY PID HAVING AVG(Quantity) > 320;
 
 --Get all the project IDs and cities where the city name has an “o”in the second letter.
 SELECT PrID, PrCity FROM Projects WHERE PrCity LIKE '_0%';
+
+--Get project names supplied by supplier S4
+SELECT PrName FROM Projects WHERE PrID IN (SELECT PrID FROM Shipments WHERE SID = 'S4');
