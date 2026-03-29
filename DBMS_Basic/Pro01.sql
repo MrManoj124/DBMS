@@ -8,3 +8,10 @@ create table Suppliers(
     SCity varchar(50)NOT NULL);
 )
 
+create table Parts(
+    PID varchar(10) PRIMARY KEY,
+    PName varchar(30) NOT NULL,
+    Colour varchar(20) NOT NULL,
+    Weight INT,
+    PCity varchar(30), NOT NULL);
+)
