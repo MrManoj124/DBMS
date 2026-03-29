@@ -1,4 +1,4 @@
-#This is only for table and table constraints and queries
+--This is only for table and table constraints and queries
 CREATE DATABASE VehicleRentalDB;
 USE VehicleRentalDB;
 
@@ -44,8 +44,8 @@ CREATE TABLE Payments (
 );
 
 
-///CRUD Operations
-///Create(Insert Data)
+
+--Create(Insert Data)
 INSERT INTO Customers(Name, Email, Phone)
 VALUES ('Manoj','manoj@gmail.com','072664165');
 
@@ -91,6 +91,13 @@ INSERT INTO Payments (RentID, Amount, PaymentDate) VALUES
 --Create (Insert opration)
 INSERT INTO Vehicles(Brand, Model, Year)
 VALUES ('Kia', 'Seltos', 2023);
+
+--READ (Select) Operation
+SELECT * FROM Vehicles;
+
+--Filter for Vehicle Availability
+SELECT * FROM Vehicle WHERE Status = 'Available';
+
 
 
 
