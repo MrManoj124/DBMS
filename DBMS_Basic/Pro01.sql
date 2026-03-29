@@ -147,3 +147,14 @@ SELECT SID FROM Suppliers WHERE Status < (SELECT Status FROM Suppliers WHERE SID
 --List all the supplier IDs and the number of different parts supplied by each supplier.
 SELECT SID, COUNT(DISTINCT PID) AS PartCount FROM Shipments GROUP BY SID;
 
+--List all the cities in which at least one supplier, part or project is located.
+SELECT DISTINCT SCity AS City FROM Suppliers 
+UNION
+SELECT DISTINCT PCity AS City FROM Parts
+UNION
+SELECT DISTINCT PrCity AS City FROM Projects;
+
+
+--Update the colour of all the red parts to orange.
+UPDATE Parts SET Colour = 'Orange' WHERE Colour = 'Red';
+
