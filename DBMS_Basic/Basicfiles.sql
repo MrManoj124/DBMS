@@ -11,10 +11,10 @@ CREATE TABLE Customers (
 
 CREATE TABLE Vehicles (
     VehicleID INT PRIMARY KEY AUTO_INCREMENT,
-    Brand VARCHAR(50),
-    Model VARCHAR(50),
-    Year INT,
-    Status VARCHAR(20) DEFAULT 'Available'
+    Brand VARCHAR(50) NOT NULL,
+    Model VARCHAR(50) NOT NULL,
+    Year INT NOT NULL,
+    Status ENUM('Available','Rented','Maintenance') DEFAULT 'Available'
 );
 
 CREATE TABLE Rentals (
