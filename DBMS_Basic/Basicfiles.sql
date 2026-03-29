@@ -4,7 +4,7 @@ USE VehicleRentalDB;
 
 CREATE TABLE Customers (
     CustomerID INT PRIMARY KEY AUTO_INCREMENT,
-    Name VARCHAR(100),
+    Name VARCHAR(100) NOT NULL,
     Email VARCHAR(100) UNIQUE,
     Phone VARCHAR(15)
 );
@@ -54,4 +54,6 @@ INSERT INTO Customers(Name, Email, Phone)
 VALUES('Ragul','ragul@gmail.com','0745166532');
 
 
-INs
+INSERT INTO Vehicles(Brand, Model, Year)
+VALUES ('BMW','X5','2020');
+
