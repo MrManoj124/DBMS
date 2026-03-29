@@ -167,3 +167,7 @@ DELETE FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments GROUP BY SID HAVIN
 --Insert a new supplier S10 into table Suppliers. The name and city are Smith and New York, respectively:
 --The status is not yet known
 INSERT INTO Suppliers (SID, SName, Status, SCity) VALUES ('S10','Smith', NULL,'New York');
+
+--Constract a table containing a list of part IDs that are supplied either by a London supplier or to a London project.
+SELECT DISTINCT PID FROM Shipments WHERE SID IN (SELECT SID FROM Suppliers WHERE SCity = 'London')
+OR PrID IN (SELECT PrID FROM Projects WHERE PrID = 'London');
