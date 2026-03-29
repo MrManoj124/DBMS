@@ -87,5 +87,10 @@ INSERT INTO Payments (RentID, Amount, PaymentDate) VALUES
 (4, 18000.00, '2026-03-14');
 
 
+--CRUD Operations---
+--Create (Insert opration)
+INSERT INTO Vehicles(Brand, Model, Year)
+VALUES ('Kia', 'Seltos', 2023);
+
 
 
