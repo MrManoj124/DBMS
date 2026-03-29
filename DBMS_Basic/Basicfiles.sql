@@ -19,20 +19,21 @@ CREATE TABLE Vehicles (
 
 CREATE TABLE Rentals (
     RentalID INT PRIMARY KEY AUTO_INCREMENT,
-    CustomerID INT,
-    VehicleID INT,
-    RentDate DATE,
+    CustomerID INT NOT NULL,
+    VehicleID INT NOT NULL,
+    RentDate DATE NOT NULL,
     ReturnDate DATE,
-    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
-    FOREIGN KEY (VehicleID) REFERENCES Vehicles(VehicleID)
-);
+
+    
+    );
 
 CREATE TABLE Payments (
     PaymentID INT PRIMARY KEY AUTO_INCREMENT,
     RentalID INT,
     Amount DECIMAL(10,2),
     PaymentDate DATE,
-    FOREIGN KEY (RentalID) REFERENCES Rentals(RentalID)
+    CONSTRAINT fk_rental 
+    FOREIGN KEY (RentalID) REFERENCES Rentals(RentalID) ON DELETE CASCADE
 );
 
 
