@@ -140,3 +140,6 @@ SELECT PrID, SUM(Quantity) AS TotalQuantity FROM Shipments GROUP BY PrID;
 
 --Get all part IDs which has been supplied to any project in London.
 SELECT DISTINCT PID FROM Shipments WHERE PrID IN (SELECT PrID FROM Projects WHERE PrCity = 'London');
+
+--Get all the supplier IDs with a status lower than supplier S1.
+SELECT SID FROM Suppliers WHERE Status < (SELECT Status FROM Suppliers WHERE SID = 'S1');
