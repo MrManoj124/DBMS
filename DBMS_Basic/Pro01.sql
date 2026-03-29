@@ -158,3 +158,8 @@ SELECT DISTINCT PrCity AS City FROM Projects;
 --Update the colour of all the red parts to orange.
 UPDATE Parts SET Colour = 'Orange' WHERE Colour = 'Red';
 
+--Delete all projects for which there are no shipments.
+DELETE FROM Projects WHERE PrID NOT IN (SELECT PrID FROM Shipments);
+
+--Delete all suppliers who supply only one part to any project.
+DELETE FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments GROUP BY SID HAVING COUNT(DISTINCT PID) = 1);
