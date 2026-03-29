@@ -55,3 +55,12 @@ INSERT INTO Suppliers (SID, SName, Status, SCity) VALUES
 ('S3','Black',30,'Paris'),
 ('S4','Clark',20,'London'),
 ('S5','Adams',30,'Athens');
+
+INSERT INTO Projects (PrID, PrName, PrCity) VALUES
+('J1','Sorter','Paris'),
+('J2','Punch','Rome'),
+('J3','Reader','Athens'),
+('J4','Console','Athens'),
+('J5','Collator','London'),
+('J6','Terminal','Oslo'),
+('J7','Tape','London');
