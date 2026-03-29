@@ -106,3 +106,6 @@ SELECT SID FROM Shipments WHERE PrID = 'J1' ORDER BY SID ASC;
 
 --Get all the suppliers names who supply part P2
 SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments WHERE PID = 'P2');
+
+--Get all the suppliers name such that more than one suppliers are living in the same location
+SELECT SName FROM Suppliers WHERE SID NOT IN (SELECT SID FROM Shipments WHERE PID = 'P2')
