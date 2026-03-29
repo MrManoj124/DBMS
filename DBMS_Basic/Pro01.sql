@@ -97,3 +97,7 @@ SELECT * FROM Projects WHERE PrCity = 'London';
 
 --Get the range(300-750) of quality of Shipments
 SELECT * FROM Shipments WHERE Quantity BETWEEN 300 AND 750;
+
+--Get SID for check Status greater than 20
+SELECT SID FROM Suppliers WHERE Status > 20;
+ 
