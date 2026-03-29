@@ -99,5 +99,7 @@ SELECT * FROM Vehicles;
 SELECT * FROM Vehicle WHERE Status = 'Available';
 
 
+--Get Specific Columns
+SELECT Brand, Model FROM Vehicles;
 
 
