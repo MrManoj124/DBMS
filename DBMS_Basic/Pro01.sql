@@ -119,3 +119,9 @@ SELECT sh.SID, sh.PID, sh.PrID FROM Shipments sh JOIN Suppliers s ON sh.SID = s.
 JOIN Parts p ON sh.PID = p.PID
 JOIN Projects j ON sh.PrID = j.PrID
 WHERE NOT (s.SCity = p.PCity AND p.PCity = j.PrCity);
+
+--Find the total number of projects supplied by supplier S1.
+SELECT COUNT(DISTINCT PrID) FROM Shipments WHERE SID = 'S1';
+
+--
+
