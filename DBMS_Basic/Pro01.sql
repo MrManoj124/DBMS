@@ -134,3 +134,6 @@ SELECT PrID, PrCity FROM Projects WHERE PrCity LIKE '_0%';
 
 --Get project names supplied by supplier S4
 SELECT PrName FROM Projects WHERE PrID IN (SELECT PrID FROM Shipments WHERE SID = 'S4');
+
+--Get the total quantity of parts supplied total for each projects
+SELECT PrID, SUM(Quantity) AS TotalQuantity FROM Shipments GROUP BY PrID;
