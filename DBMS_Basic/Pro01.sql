@@ -163,3 +163,7 @@ DELETE FROM Projects WHERE PrID NOT IN (SELECT PrID FROM Shipments);
 
 --Delete all suppliers who supply only one part to any project.
 DELETE FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments GROUP BY SID HAVING COUNT(DISTINCT PID) = 1);
+
+--Insert a new supplier S10 into table Suppliers. The name and city are Smith and New York, respectively:
+--The status is not yet known
+INSERT INTO Suppliers (SID, SName, Status, SCity) VALUES ('S10','Smith', NULL,'New York');
