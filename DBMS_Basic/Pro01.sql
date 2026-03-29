@@ -112,3 +112,10 @@ SELECT SName FROM Suppliers WHERE SCity IN (SELECT SCity FROM Suppliers GROUP BY
 
 --Get all the supplier names who do not supply part P2
 SELECT SName FROM Suppliers WHERE SID NOT IN (SELECT SID FROM Shipments WHERE PID = 'P2');
+
+--Get Get all supplier ID, part ID and project ID triples such that the indicated
+--supplier, part and project are not all co-located.
+SELECT sh.SID, sh.PID, sh.PrID FROM Shipments sh JOIN Suppliers s ON sh.SID = s.SID
+JOIN Parts p ON sh.PID = p.PID
+JOIN Projects j ON sh.PrID = j.PrID
+WHERE NOT (s.SCity = p.PCity AND p.PCity = j.PrCity);
