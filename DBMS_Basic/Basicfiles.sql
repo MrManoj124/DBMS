@@ -25,6 +25,13 @@ CREATE TABLE Rentals (
     ReturnDate DATE,
 
     
+    CONSTRAINT FK_customer
+        FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_vehicle
+        FOREIGN KEY (VehicleID) REFERENCES Vehicles(VehicleID)
+        ON DELETE CASCADE
     );
 
 CREATE TABLE Payments (
