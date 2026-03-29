@@ -100,4 +100,6 @@ SELECT * FROM Shipments WHERE Quantity BETWEEN 300 AND 750;
 
 --Get SID for check Status greater than 20
 SELECT SID FROM Suppliers WHERE Status > 20;
- 
+
+--Get SID who supply project J1 in Ascending order
+SELECT SID FROM Shipments WHERE PrID = 'J1' ORDER BY SID ASC;
