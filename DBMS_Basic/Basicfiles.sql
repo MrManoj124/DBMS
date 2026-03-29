@@ -74,3 +74,13 @@ INSERT INTO Vehicles (Brand, Model, Year, Status) VALUES
 ('Nissan', 'Altima', 2020, 'Available'),
 ('Ford', 'Mustang', 2021, 'Rented');
 
+INSERT INTO Rentals(CustomerID, VehicleID, RentDate, ReturnDate) VALUES
+(1, 3, '2026-01-15', '2026-02-02'),
+(2, 4, '2026-03-16', NOT NULL),
+(3, 6, '2026-03-18', NOT NULL),
+(4, 7, '2026-02-14', '2026-02-24');
+
+
+
+
+
