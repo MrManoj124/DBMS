@@ -103,3 +103,9 @@ SELECT * FROM Vehicle WHERE Status = 'Available';
 SELECT Brand, Model FROM Vehicles;
 
 
+--UPDATE Operation
+--Update Vehicle Status
+UPDATE Vehicles SET Status = 'Rented' WHERE VehicleID = 4;
+
+
+
