@@ -109,3 +109,13 @@ INSERT INTO Patients (first_name, last_name, date_of_birth, gender, blood_group,
 ('Lakshan',  'Gamage',    '1978-11-30', 'M', 'B-',  '197832600789', '0713456789', NULL),
 ('Dilhani',  'Rathnayake','2001-03-17', 'F', 'AB+', '200107800012', '0714567890', 'dilhani.r@email.com'),
 ('Chamara',  'Samarasinghe','1965-06-05','M','O-',  '196516100345', '0715678901', NULL);
+
+
+-- Insert appointments
+INSERT INTO appointments (patient_id, doctor_id, appointment_dt, reason, status) VALUES
+(1, 1, '2025-01-15 09:00:00', 'Chest pain evaluation',     'Completed'),
+(2, 3, '2025-01-16 10:30:00', 'Frequent headaches',        'Completed'),
+(3, 1, '2025-01-20 14:00:00', 'Follow-up ECG',             'Completed'),
+(4, 4, '2025-01-22 11:00:00', 'Routine checkup',           'Completed'),
+(5, 1, '2025-02-01 09:30:00', 'Hypertension management',   'Completed'),
+(1, 1, '2025-06-10 09:00:00', 'Annual cardiac review',     'Scheduled');
