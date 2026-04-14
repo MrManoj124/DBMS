@@ -128,4 +128,7 @@ SELECT * FROM Doctors;
 SELECT patient_id CONCAT (first_name, '', last_name) AS full_name, date_of_birth, 
 TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) AS age , blood_group FROM Patients;
 
---WHERE 
+--WHERE clause with conditions
+select first_name, last_name, hire_date from Doctors
+WHERE salary > 300000 AND is_available = TRUE;
+
