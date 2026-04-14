@@ -31,5 +31,8 @@ create table Doctors(
     hire_date DATE NOT NULL,
     is_available BOOLEAN NOT NULL DEFAULT TRUE,
 
-    
+    CONSTRAINT pk_doctors PRIMARY KEY (doctor_id),
+    CONSTRAINT uq_license_number UNIQUE(license_number),
+    CONSTRAINT uq_doctor_email UNIQUE(email),
+    CONSTRAINT fk_doc_dept FOREIGN KEY(department_id) 
 )
