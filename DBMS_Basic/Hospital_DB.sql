@@ -37,5 +37,5 @@ create table Doctors(
     CONSTRAINT fk_doc_dept FOREIGN KEY(department_id) REFERENCES Departments(department_id)
     ON DELETE RESTRICT,
     ON DELETE CASCADE,
-    CONSTRAINT 
-)
+    CONSTRAINT chk_doctor_salary CHECK (salary > 0)
+);
