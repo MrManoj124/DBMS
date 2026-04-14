@@ -136,3 +136,7 @@ WHERE salary > 300000 AND is_available = TRUE;
 SELECT first_name, last_name, hire_date, salary from Doctors
 order by salary DESC limit 3;
 
+--Like Pattern matching
+SELECT * FROM Patients 
+WHERE email LIKE 's%' and last_name LIKE '%a';
+
