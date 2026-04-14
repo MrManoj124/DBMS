@@ -155,3 +155,5 @@ select * from Doctors where specialization = 'Pediatrician' or 'Neurologist';
 --AND operator
 select * from Patients where blood_group = 'O+' AND gender = 'M';
 
+--Get the Doctor details for  Doctors who are specialized in 'Cardialogy'
+select * from Doctors where specialization = 'Cardiology' ;
