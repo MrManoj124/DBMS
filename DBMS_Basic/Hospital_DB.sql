@@ -140,3 +140,11 @@ order by salary DESC limit 3;
 SELECT * FROM Patients 
 WHERE email LIKE 's%' and last_name LIKE '%a';
 
+--Example 02 of Like pattern matching
+select * from Patients 
+where phone like '071%' and first_name like '%a%';
+
+
+--IN operator
+select * from Appointments
+WHERE Status IN ('Scheduled','Completed') AND appointment_date > 2025-01-01 AND appointment_date < 2025-12-31;
