@@ -148,3 +148,7 @@ where phone like '071%' and first_name like '%a%';
 --IN operator
 select * from Appointments
 WHERE Status IN ('Scheduled','Completed') AND appointment_date > 2025-01-01 AND appointment_date < 2025-12-31;
+
+--OR operator
+select * from Doctors where specialization = 'Pediatrician' or 'Neurologist';
+
