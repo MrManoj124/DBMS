@@ -15,3 +15,21 @@ create table Departments(
     CONSTRAINT pk_departments PRIMARY KEY (department_id),
     CONSTRAINT uq_dept_code UNIQUE (dept_code)
 );
+
+
+--Create Doctors table
+create table Doctors(
+    doctor_id INT NOT NULL AUTO_INCREMENT,
+    department_id INT NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    specialization VARCHAR(100) NOT NULL,
+    license_number VARCHAR(30) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL,
+    hire_date DATE NOT NULL,
+    is_available BOOLEAN NOT NULL DEFAULT TRUE,
+
+    
+)
