@@ -34,5 +34,8 @@ create table Doctors(
     CONSTRAINT pk_doctors PRIMARY KEY (doctor_id),
     CONSTRAINT uq_license_number UNIQUE(license_number),
     CONSTRAINT uq_doctor_email UNIQUE(email),
-    CONSTRAINT fk_doc_dept FOREIGN KEY(department_id) 
+    CONSTRAINT fk_doc_dept FOREIGN KEY(department_id) REFERENCES Departments(department_id)
+    ON DELETE RESTRICT,
+    ON DELETE CASCADE,
+    CONSTRAINT 
 )
