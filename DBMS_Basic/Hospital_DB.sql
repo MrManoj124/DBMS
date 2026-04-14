@@ -125,4 +125,7 @@ INSERT INTO appointments (patient_id, doctor_id, appointment_dt, reason, status)
 SELECT * FROM Doctors;
 
 --Select specific columns with for aliasing
-SELECT patient_id
+SELECT patient_id CONCAT (first_name, '', last_name) AS full_name, date_of_birth, 
+TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) AS age , blood_group FROM Patients;
+
+--WHERE 
