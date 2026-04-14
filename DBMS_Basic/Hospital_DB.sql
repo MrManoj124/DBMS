@@ -83,7 +83,7 @@ create table Appointments(
 
 
 -- Insert departments
-INSERT INTO departments (dept_name, dept_code, floor_number, phone_ext) VALUES
+INSERT INTO Departments (dept_name, dept_code, floor_number, phone_ext) VALUES
 ('Cardiology',      'CARD',  3, '301'),
 ('Neurology',       'NEUR',  4, '401'),
 ('Pediatrics',      'PEDI',  2, '201'),
@@ -94,9 +94,18 @@ INSERT INTO departments (dept_name, dept_code, floor_number, phone_ext) VALUES
 
 
 -- Insert doctors
-INSERT INTO doctors (department_id, first_name, last_name, specialization, license_number, email, phone, salary, hire_date) VALUES
+INSERT INTO Doctors (department_id, first_name, last_name, specialization, license_number, email, phone, salary, hire_date) VALUES
 (1, 'Sarah',   'Ahmed',    'Interventional Cardiologist', 'MD-2018-001', 'sarah.ahmed@hospital.lk',   '0771234567', 350000.00, '2018-03-15'),
 (1, 'Kamal',   'Perera',   'General Cardiologist',        'MD-2015-002', 'kamal.perera@hospital.lk',  '0772345678', 300000.00, '2015-07-01'),
 (2, 'Nirmala', 'Fernando', 'Neurologist',                 'MD-2019-003', 'nirmala.f@hospital.lk',     '0773456789', 320000.00, '2019-01-10'),
 (3, 'Roshan',  'Silva',    'Pediatrician',                'MD-2016-004', 'roshan.silva@hospital.lk',  '0774567890', 280000.00, '2016-09-20'),
 (5, 'Amali',   'Jayakody', 'Emergency Medicine',          'MD-2020-005', 'amali.j@hospital.lk',       '0775678901', 290000.00, '2020-06-01');
+
+
+-- Insert patients
+INSERT INTO Patients (first_name, last_name, date_of_birth, gender, blood_group, national_id, phone, email) VALUES
+('Nuwan',    'Bandara',   '1985-04-12', 'M', 'O+',  '198512400123', '0711234567', 'nuwan.b@email.com'),
+('Sanduni',  'Wickrama',  '1992-08-25', 'F', 'A+',  '199223600456', '0712345678', 'sanduni.w@email.com'),
+('Lakshan',  'Gamage',    '1978-11-30', 'M', 'B-',  '197832600789', '0713456789', NULL),
+('Dilhani',  'Rathnayake','2001-03-17', 'F', 'AB+', '200107800012', '0714567890', 'dilhani.r@email.com'),
+('Chamara',  'Samarasinghe','1965-06-05','M','O-',  '196516100345', '0715678901', NULL);
