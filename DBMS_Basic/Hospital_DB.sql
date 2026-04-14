@@ -75,5 +75,6 @@ create table Appointments(
     notes TEXT,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
+    constraint pk_appointments PRIMARY KEY (appointment_id),
     
 )
