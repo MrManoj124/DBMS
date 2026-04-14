@@ -132,3 +132,7 @@ TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) AS age , blood_group FROM Patients
 select first_name, last_name, hire_date from Doctors
 WHERE salary > 300000 AND is_available = TRUE;
 
+--order by and limit
+SELECT first_name, last_name, hire_date, salary from Doctors
+order by salary DESC limit 3;
+
