@@ -13,5 +13,5 @@ create table Departments(
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT pk_departments PRIMARY KEY (department_id),
-    
-)
+    CONSTRAINT uq_dept_code UNIQUE (dept_code)
+);
