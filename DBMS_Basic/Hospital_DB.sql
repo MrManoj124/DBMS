@@ -39,3 +39,23 @@ create table Doctors(
     ON DELETE CASCADE,
     CONSTRAINT chk_doctor_salary CHECK (salary > 0)
 );
+
+
+
+--Create Patients table
+create table Patients(
+    patient_id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    gender ENUM('M','F','Other') NOT NULL,
+    date_of_birth DATE NOT NULL,
+    blood_group ENUM('A+','A-','B+','B-','AB+','AB-','O+','O-') NOT NULL,
+    national_id VARCHAR (20) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    address TEXT,
+    emergency_contact_name VARCHAR(100) NOT NULL,
+    emergency_contact_phone VARCHAR(20) NOT NULL,
+    registered_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    
+)
