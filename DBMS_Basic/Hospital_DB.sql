@@ -157,3 +157,10 @@ select * from Patients where blood_group = 'O+' AND gender = 'M';
 
 --Get the Doctor details for  Doctors who are specialized in 'Cardialogy'
 select * from Doctors where specialization = 'Cardiology' ;
+
+
+--group by and having
+SELECT department_id, COUNT(*) AS doctor_count, AVG(salary) AS avg_salary
+FROM Doctors
+GROUP BY department_id
+HAVING COUNT(*) > 1;
