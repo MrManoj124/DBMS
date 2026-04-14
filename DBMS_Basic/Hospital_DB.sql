@@ -119,3 +119,10 @@ INSERT INTO appointments (patient_id, doctor_id, appointment_dt, reason, status)
 (4, 4, '2025-01-22 11:00:00', 'Routine checkup',           'Completed'),
 (5, 1, '2025-02-01 09:30:00', 'Hypertension management',   'Completed'),
 (1, 1, '2025-06-10 09:00:00', 'Annual cardiac review',     'Scheduled');
+
+
+--Simple Select query to retrieve all doctors
+SELECT * FROM Doctors;
+
+--Select specific columns with for aliasing
+SELECT patient_id
