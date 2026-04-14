@@ -152,3 +152,6 @@ WHERE Status IN ('Scheduled','Completed') AND appointment_date > 2025-01-01 AND 
 --OR operator
 select * from Doctors where specialization = 'Pediatrician' or 'Neurologist';
 
+--AND operator
+select * from Patients where blood_group = 'O+' AND gender = 'M';
+
