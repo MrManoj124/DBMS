@@ -57,5 +57,9 @@ create table Patients(
     emergency_contact_name VARCHAR(100) NOT NULL,
     emergency_contact_phone VARCHAR(20) NOT NULL,
     registered_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    
-)
+
+    constraint pk_patients PRIMARY KEY (patient_id),
+    constraint uq_national_id UNIQUE (nationl_id),
+    constraint chk_dob CHECK (date_of_birth < CURDATE())
+);
+
