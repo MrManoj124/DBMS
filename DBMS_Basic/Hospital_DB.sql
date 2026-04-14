@@ -63,3 +63,17 @@ create table Patients(
     constraint chk_dob CHECK (date_of_birth < CURDATE())
 );
 
+
+--create Appointments table
+create table Appointments(
+    appointment_id INT NOT NULL AUTO_INCREMENT,
+    patient_id INT NOT NULL,
+    doctor_id INT NOT NULL,
+    appointment_date DATETIME NOT NULL,
+    reason VARCHAR(255) NOT NULL,
+    status ENUM('Scheduled','Completed','Cancelled','No-Show') NOT NULL DEFAULT 'Scheduled',
+    notes TEXT,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    
+)
