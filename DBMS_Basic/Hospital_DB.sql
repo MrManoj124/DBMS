@@ -164,3 +164,7 @@ SELECT department_id, COUNT(*) AS doctor_count, AVG(salary) AS avg_salary
 FROM Doctors
 GROUP BY department_id
 HAVING COUNT(*) > 1;
+
+--example of subquery
+SELECT first_name, last_name FROM Doctors
+WHERE department_id IN (SELECT department_id FROM Departments WHERE dept_name = 'Cardiology');
