@@ -78,5 +78,5 @@ create table Appointments(
     constraint pk_appointments PRIMARY KEY (appointment_id),
     constraint fk_appoin_id FOREIGN KEY(patient_id) REFERENCES Patients(patient_id) ON DELETE RESTRICT,
     constraint fk_appoin_doctor_id FOREIGN KEY(doctor_id) REFERENCES Doctors(doctor_id) ON DELETE RESTRICT,
-    
-)
+    constraint chk_appoin_date CHECK (appointment_date > created_at)
+);
