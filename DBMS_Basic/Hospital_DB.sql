@@ -80,3 +80,14 @@ create table Appointments(
     constraint fk_appoin_doctor_id FOREIGN KEY(doctor_id) REFERENCES Doctors(doctor_id) ON DELETE RESTRICT,
     constraint chk_appoin_date CHECK (appointment_date > created_at)
 );
+
+
+-- Insert departments
+INSERT INTO departments (dept_name, dept_code, floor_number, phone_ext) VALUES
+('Cardiology',      'CARD',  3, '301'),
+('Neurology',       'NEUR',  4, '401'),
+('Pediatrics',      'PEDI',  2, '201'),
+('Orthopedics',     'ORTH',  5, '501'),
+('Emergency',       'EMRG',  1, '101'),
+('Radiology',       'RADI',  2, '210'),
+('Oncology',        'ONCO',  6, '601');
