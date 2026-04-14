@@ -91,3 +91,12 @@ INSERT INTO departments (dept_name, dept_code, floor_number, phone_ext) VALUES
 ('Emergency',       'EMRG',  1, '101'),
 ('Radiology',       'RADI',  2, '210'),
 ('Oncology',        'ONCO',  6, '601');
+
+
+-- Insert doctors
+INSERT INTO doctors (department_id, first_name, last_name, specialization, license_number, email, phone, salary, hire_date) VALUES
+(1, 'Sarah',   'Ahmed',    'Interventional Cardiologist', 'MD-2018-001', 'sarah.ahmed@hospital.lk',   '0771234567', 350000.00, '2018-03-15'),
+(1, 'Kamal',   'Perera',   'General Cardiologist',        'MD-2015-002', 'kamal.perera@hospital.lk',  '0772345678', 300000.00, '2015-07-01'),
+(2, 'Nirmala', 'Fernando', 'Neurologist',                 'MD-2019-003', 'nirmala.f@hospital.lk',     '0773456789', 320000.00, '2019-01-10'),
+(3, 'Roshan',  'Silva',    'Pediatrician',                'MD-2016-004', 'roshan.silva@hospital.lk',  '0774567890', 280000.00, '2016-09-20'),
+(5, 'Amali',   'Jayakody', 'Emergency Medicine',          'MD-2020-005', 'amali.j@hospital.lk',       '0775678901', 290000.00, '2020-06-01');
