@@ -182,3 +182,6 @@ select department_id, COUNT(*) AS doctor_count, AVG(salary) AS avg_salary from D
 
 --Aggregate functions with SUM
 select department_id, SUM(salary)  AS total_salary from Doctors group by department_id;
+
+--Get max and minimum salary of doctors
+select * from Doctors, MAX(salary) AS max_salary, MIN(salary) AS min_salary from Doctors;
