@@ -168,3 +168,8 @@ HAVING COUNT(*) > 1;
 --example of subquery
 SELECT first_name, last_name FROM Doctors
 WHERE department_id IN (SELECT department_id FROM Departments WHERE dept_name = 'Cardiology');
+
+
+--SQL select distinct Statement
+select distinct specialization from Doctors;
+
