@@ -2,13 +2,13 @@ create database if does not exist Hospital_db;
 
 use Hospital_db;
 
---Create Departments table
+-- Create Departments table
 create table Departments(
     department_id INT NOT NULL AUTO_INCREMENT,
     dept_name VARCHAR(100) NOT NULL ,
     dept_code CHAR(5) NOT NULL,
-    floor_number TINYINT NOT NULL,
-    phone_txt VARCHAR,
+    floor_number TINYINT NOT NULL DEFAULT 1,
+    phone_txt VARCHAR(20),
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
@@ -17,7 +17,7 @@ create table Departments(
 );
 
 
---Create Doctors table
+-- Create Doctors table
 create table Doctors(
     doctor_id INT NOT NULL AUTO_INCREMENT,
     department_id INT NOT NULL,
@@ -35,14 +35,14 @@ create table Doctors(
     CONSTRAINT uq_license_number UNIQUE(license_number),
     CONSTRAINT uq_doctor_email UNIQUE(email),
     CONSTRAINT fk_doc_dept FOREIGN KEY(department_id) REFERENCES Departments(department_id)
-    ON DELETE RESTRICT,
-    ON DELETE CASCADE,
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
     CONSTRAINT chk_doctor_salary CHECK (salary > 0)
 );
 
 
 
---Create Patients table
+-- Create Patients table
 create table Patients(
     patient_id INT NOT NULL AUTO_INCREMENT,
     first_name VARCHAR(50) NOT NULL,
@@ -59,12 +59,12 @@ create table Patients(
     registered_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     constraint pk_patients PRIMARY KEY (patient_id),
-    constraint uq_national_id UNIQUE (nationl_id),
+    constraint uq_national_id UNIQUE (national_id),
     constraint chk_dob CHECK (date_of_birth < CURDATE())
 );
 
 
---create Appointments table
+-- create Appointments table
 create table Appointments(
     appointment_id INT NOT NULL AUTO_INCREMENT,
     patient_id INT NOT NULL,
