@@ -192,3 +192,7 @@ select doctor_id, COUNT(*) AS Appointment_count from Appointments group by docto
 
 --Get the department name and department code for same doctors
 select d.dept_name, d.dept_code from Doctors doctor join Departments d on doctor.department_id = d.department_id;
+
+
+--Count Distinct Values
+select department_id, COUNT(DISTINCT specialization) AS unique_specializations from Doctors group by department_id;
