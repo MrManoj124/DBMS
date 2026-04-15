@@ -185,3 +185,7 @@ select department_id, SUM(salary)  AS total_salary from Doctors group by departm
 
 --Get max and minimum salary of doctors
 select * from Doctors, MAX(salary) AS max_salary, MIN(salary) AS min_salary from Doctors;
+
+
+--Get the number of appointments for each doctor
+select doctor_id, COUNT(*) AS Appointment_count from Appointments group by doctor_id;
