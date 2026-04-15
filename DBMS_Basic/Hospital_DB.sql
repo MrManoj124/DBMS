@@ -176,3 +176,9 @@ select distinct specialization from Doctors;
 
 --SELECT Example Without DISTINCT
 SELECT specialization FROM Doctors;
+
+--Aggregate functions with COUNT, AVG
+select department_id, COUNT(*) AS doctor_count, AVG(salary) AS avg_salary from Doctors group by department_id;
+
+--Aggregate functions with SUM
+select department_id, SUM(salary)  AS total_salary from Doctors group by department_id;
