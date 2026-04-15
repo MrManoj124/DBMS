@@ -8,7 +8,7 @@ create table Departments(
     dept_name VARCHAR(100) NOT NULL ,
     dept_code CHAR(5) NOT NULL,
     floor_number TINYINT NOT NULL DEFAULT 1,
-    phone_txt VARCHAR(20),
+    phone_txt VARCHAR(10) NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
@@ -60,7 +60,7 @@ create table Patients(
 
     constraint pk_patients PRIMARY KEY (patient_id),
     constraint uq_national_id UNIQUE (national_id),
-    constraint chk_dob CHECK (date_of_birth < CURDATE())
+    -- constraint chk_dob CHECK (date_of_birth < CURDATE())
 );
 
 
@@ -83,7 +83,7 @@ create table Appointments(
 
 
 -- Insert departments
-INSERT INTO Departments (dept_name, dept_code, floor_number, phone_ext) VALUES
+INSERT INTO Departments (dept_name, dept_code, floor_number, phone_txt) VALUES
 ('Cardiology',      'CARD',  3, '301'),
 ('Neurology',       'NEUR',  4, '401'),
 ('Pediatrics',      'PEDI',  2, '201'),
@@ -173,3 +173,6 @@ WHERE department_id IN (SELECT department_id FROM Departments WHERE dept_name = 
 --SQL select distinct Statement
 select distinct specialization from Doctors;
 
+
+--SELECT Example Without DISTINCT
+SELECT specialization FROM Doctors;
