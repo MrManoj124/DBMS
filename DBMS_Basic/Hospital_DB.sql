@@ -189,3 +189,6 @@ select * from Doctors, MAX(salary) AS max_salary, MIN(salary) AS min_salary from
 
 --Get the number of appointments for each doctor
 select doctor_id, COUNT(*) AS Appointment_count from Appointments group by doctor_id;
+
+--Get the department name and department code for same doctors
+select d.dept_name, d.dept_code from Doctors doctor join Departments d on doctor.department_id = d.department_id;
