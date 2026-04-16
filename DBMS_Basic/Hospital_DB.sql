@@ -299,4 +299,10 @@ create table Prescriptions (
     CONSTRAINT fk_presc_appt      FOREIGN KEY (appointment_id)
                                   REFERENCES appointments(appointment_id)
                                   ON DELETE RESTRICT,
+
+    CONSTRAINT fk_presc_patient   FOREIGN KEY (patient_id)
+                                  REFERENCES patients(patient_id)
+                                  ON DELETE RESTRICT,
+
+    
 )
