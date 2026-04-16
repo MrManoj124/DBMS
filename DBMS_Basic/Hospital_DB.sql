@@ -265,5 +265,8 @@ CREATE TABLE rooms (
                                  REFERENCES departments(department_id)
                                  ON DELETE RESTRICT ON UPDATE CASCADE,
 
-    
+    -- Cannot have more occupied beds than total beds
+    CONSTRAINT chk_beds          CHECK (occupied_beds <= total_beds),
+    CONSTRAINT chk_beds_pos      CHECK (total_beds > 0 AND occupied_beds >= 0),
+    CONSTRAINT chk_daily_rate    CHECK (daily_rate > 0)
 );

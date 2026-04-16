@@ -34,6 +34,7 @@ CREATE TABLE Rentals (
         ON DELETE CASCADE
     );
 
+
 CREATE TABLE Payments (
     PaymentID INT PRIMARY KEY AUTO_INCREMENT,
     RentalID INT,
