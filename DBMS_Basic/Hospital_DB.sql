@@ -304,5 +304,9 @@ create table Prescriptions (
                                   REFERENCES patients(patient_id)
                                   ON DELETE RESTRICT,
 
+    CONSTRAINT fk_presc_doctor    FOREIGN KEY (doctor_id)
+                                  REFERENCES doctors(doctor_id)
+                                  ON DELETE RESTRICT,
+
     
 )
