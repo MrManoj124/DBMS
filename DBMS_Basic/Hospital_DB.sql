@@ -235,3 +235,11 @@ CREATE TABLE Medicines (
     CONSTRAINT chk_stock_qty    CHECK (stock_qty >= 0),
     CONSTRAINT chk_reorder      CHECK (reorder_level >= 0)
 );
+
+
+-- create a table for rooms
+-- ============================================================
+-- TABLE 6: Rooms
+-- Teaches: ENUM, composite UNIQUE, CHECK with multiple columns,
+--          a self-referencing-style pattern
+-- ============================================================
