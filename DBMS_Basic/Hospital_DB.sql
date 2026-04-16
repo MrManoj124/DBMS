@@ -308,5 +308,6 @@ create table Prescriptions (
                                   REFERENCES doctors(doctor_id)
                                   ON DELETE RESTRICT,
 
-    
+    -- Prescription must be valid for at least 1 day
+    CONSTRAINT chk_presc_dates    CHECK (valid_until > prescribed_date)
 )
