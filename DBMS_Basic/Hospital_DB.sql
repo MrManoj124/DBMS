@@ -258,5 +258,8 @@ CREATE TABLE rooms (
 
     CONSTRAINT pk_rooms          PRIMARY KEY (room_id),
 
+    -- Room number must be unique within a department
+    CONSTRAINT uq_room_dept      UNIQUE (department_id, room_number),
+
     
 );
