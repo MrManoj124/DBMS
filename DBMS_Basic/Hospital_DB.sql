@@ -279,3 +279,19 @@ CREATE TABLE rooms (
 -- Teaches: FK chain (prescription → appointment → patient/doctor),
 --          ENUM status machine, date logic CHECK
 -- ============================================================
+create table Prescriptions (
+    prescrption_id    INT             NOT NULL AUTO_INCREMENT,
+    appointment_id  INT             NOT NULL,
+    patient_id      INT             NOT NULL,
+    doctor_id       INT             NOT NULL,
+    prescribed_date DATE            NOT NULL DEFAULT (CURDATE()),
+    valid_until     DATE           NOT NULL,
+    diagnosis        VARCHAR(255)    NOT NULL,
+    status          ENUM('Active','Dispensed','Expired','Cancelled')
+                                    NOT NULL DEFAULT 'Active',
+    notes           TEXT,
+    created_at      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP
+                                    ON UPDATE CURRENT_TIMESTAMP,
+    
+)
