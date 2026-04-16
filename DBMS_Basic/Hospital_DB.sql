@@ -270,3 +270,12 @@ CREATE TABLE rooms (
     CONSTRAINT chk_beds_pos      CHECK (total_beds > 0 AND occupied_beds >= 0),
     CONSTRAINT chk_daily_rate    CHECK (daily_rate > 0)
 );
+
+
+
+-- Create Prescription Table
+-- ============================================================
+-- TABLE 7: Prescriptions (header record)
+-- Teaches: FK chain (prescription → appointment → patient/doctor),
+--          ENUM status machine, date logic CHECK
+-- ============================================================
