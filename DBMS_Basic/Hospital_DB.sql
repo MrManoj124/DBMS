@@ -224,5 +224,7 @@ CREATE TABLE Medicines (
     requires_prescription BOOLEAN   NOT NULL DEFAULT TRUE,
     is_available    BOOLEAN         NOT NULL DEFAULT TRUE,
 
+    CONSTRAINT pk_medicines     PRIMARY KEY (medicine_id),
+
     
 );
