@@ -293,5 +293,8 @@ create table Prescriptions (
     created_at      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at      TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP
                                     ON UPDATE CURRENT_TIMESTAMP,
+
+    CONSTRAINT pk_prescriptions   PRIMARY KEY (prescription_id),
+
     
 )
