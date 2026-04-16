@@ -296,5 +296,7 @@ create table Prescriptions (
 
     CONSTRAINT pk_prescriptions   PRIMARY KEY (prescription_id),
 
-    
+    CONSTRAINT fk_presc_appt      FOREIGN KEY (appointment_id)
+                                  REFERENCES appointments(appointment_id)
+                                  ON DELETE RESTRICT,
 )
