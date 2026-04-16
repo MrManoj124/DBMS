@@ -261,5 +261,9 @@ CREATE TABLE rooms (
     -- Room number must be unique within a department
     CONSTRAINT uq_room_dept      UNIQUE (department_id, room_number),
 
+    CONSTRAINT fk_room_dept      FOREIGN KEY (department_id)
+                                 REFERENCES departments(department_id)
+                                 ON DELETE RESTRICT ON UPDATE CASCADE,
+
     
 );
