@@ -243,3 +243,18 @@ CREATE TABLE Medicines (
 -- Teaches: ENUM, composite UNIQUE, CHECK with multiple columns,
 --          a self-referencing-style pattern
 -- ============================================================
+CREATE TABLE rooms (
+    room_id         INT             NOT NULL AUTO_INCREMENT,
+    department_id   INT             NOT NULL,
+    room_number     VARCHAR(10)     NOT NULL,
+    room_type       ENUM('General','ICU','Private','Semi-Private',
+                         'Operation Theatre','Consultation','Emergency')
+                                    NOT NULL,
+    floor_number    TINYINT         NOT NULL,
+    total_beds      TINYINT         NOT NULL DEFAULT 1,
+    occupied_beds   TINYINT         NOT NULL DEFAULT 0,
+    daily_rate      DECIMAL(8,2)    NOT NULL,
+    is_available    BOOLEAN         NOT NULL DEFAULT TRUE,
+
+    
+);
