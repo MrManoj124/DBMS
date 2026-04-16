@@ -196,3 +196,12 @@ select d.dept_name, d.dept_code from Doctors doctor join Departments d on doctor
 
 --Count Distinct Values
 select department_id, COUNT(DISTINCT specialization) AS unique_specializations from Doctors group by department_id;
+
+
+
+--create a Medicines Table
+-- ============================================================
+-- TABLE 5: Medicines
+-- Teaches: UNIQUE on multiple columns, CHECK on strings & numbers,
+--          ENUM for controlled vocabulary
+-- ============================================================
