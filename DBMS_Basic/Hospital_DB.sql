@@ -226,5 +226,9 @@ CREATE TABLE Medicines (
 
     CONSTRAINT pk_medicines     PRIMARY KEY (medicine_id),
 
+    -- The same generic name can exist under multiple brands,
+    -- but not the same brand+generic combination twice
+    CONSTRAINT uq_med_brand_generic UNIQUE (brand_name, generic_name),
+
     
 );
