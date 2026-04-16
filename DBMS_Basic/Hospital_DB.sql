@@ -230,5 +230,8 @@ CREATE TABLE Medicines (
     -- but not the same brand+generic combination twice
     CONSTRAINT uq_med_brand_generic UNIQUE (brand_name, generic_name),
 
-    
+    -- Business rules as CHECK constraints
+    CONSTRAINT chk_unit_price   CHECK (unit_price > 0),
+    CONSTRAINT chk_stock_qty    CHECK (stock_qty >= 0),
+    CONSTRAINT chk_reorder      CHECK (reorder_level >= 0)
 );
