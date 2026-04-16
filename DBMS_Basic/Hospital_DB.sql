@@ -256,5 +256,7 @@ CREATE TABLE rooms (
     daily_rate      DECIMAL(8,2)    NOT NULL,
     is_available    BOOLEAN         NOT NULL DEFAULT TRUE,
 
+    CONSTRAINT pk_rooms          PRIMARY KEY (room_id),
+
     
 );
