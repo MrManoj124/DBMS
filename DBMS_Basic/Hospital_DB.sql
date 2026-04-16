@@ -205,3 +205,24 @@ select department_id, COUNT(DISTINCT specialization) AS unique_specializations f
 -- Teaches: UNIQUE on multiple columns, CHECK on strings & numbers,
 --          ENUM for controlled vocabulary
 -- ============================================================
+
+CREATE TABLE Medicines (
+    medicine_id     INT             NOT NULL AUTO_INCREMENT,
+    brand_name      VARCHAR(100)    NOT NULL,
+    generic_name    VARCHAR(100)    NOT NULL,
+    category        ENUM(
+                      'Antibiotic','Analgesic','Antihypertensive',
+                      'Antidiabetic','Cardiac','Neurological',
+                      'Vitamin','Steroid','Other'
+                    )               NOT NULL,
+    unit            ENUM('Tablet','Capsule','Syrup','Injection',
+                         'Cream','Inhaler','Drops') NOT NULL,
+    unit_price      DECIMAL(8,2)    NOT NULL,
+    stock_qty       INT             NOT NULL DEFAULT 0,
+    reorder_level   INT             NOT NULL DEFAULT 50,
+    manufacturer    VARCHAR(150)    NOT NULL,
+    requires_prescription BOOLEAN   NOT NULL DEFAULT TRUE,
+    is_available    BOOLEAN         NOT NULL DEFAULT TRUE,
+
+    
+);
