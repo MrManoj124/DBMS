@@ -180,3 +180,6 @@ SELECT PID FROM Shipments GROUP BY PID HAVING SUM(Quantity) > 400;
 
 -- Get the suppliers who supply more than 300 parts in total.
 SELECT SID FROM Shipments GROUP BY SID HAVING SUM(Quantity) > 300;
+
+-- Get the PrName which are supplied by more than 2 suppliers.
+SELECT PrName FROM Projects WHERE PrID IN (SELECT PrID FROM Shipments GROUP BY PrID HAVING COUNT(DISTINCT SID) > 2);
