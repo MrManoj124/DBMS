@@ -213,3 +213,6 @@ SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments GROUP BY SID
 
 -- Get the SName which has above 300 quantity or status above 20
 SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments GROUP BY SID HAVING SUM(Quantity) > 300) OR Status > 20;
+
+-- Get the SName which has above 300 quantity and status above 20 or status above 30
+SELECT SName FROM Suppliers WHERE (SID IN (SELECT SID FROM Shipments GROUP BY SID HAVING SUM(Quantity) > 300) AND Status > 20) OR Status > 30;
