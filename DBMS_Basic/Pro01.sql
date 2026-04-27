@@ -187,3 +187,7 @@ SELECT PrName FROM Projects WHERE PrID IN (SELECT PrID FROM Shipments GROUP BY P
 -- Get the PrName which are supplied by more than 2 suppliers with status 20.
 SELECT PrName FROM Projects WHERE PrID IN (SELECT PrID FROM Shipments WHERE SID IN 
 (SELECT SID FROM Suppliers WHERE Status = 20) GROUP BY PrID HAVING COUNT(DISTINCT SID) > 2);
+
+-- Get the PrName which are supplied by more than 2 suppliers with status 20 and more than 300 parts in total.
+SELECT PrName FROM Projects WHERE PrID IN (SELECT PrID FROM Shipments WHERE SID IN
+(SELECT SID FROM Suppliers WHERE Status = 20) GROUP BY PrID HAVING COUNT(DISTINCT SID) > 2 AND SUM(Quantity) > 300);
