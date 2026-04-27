@@ -195,3 +195,6 @@ SELECT PrName FROM Projects WHERE PrID IN (SELECT PrID FROM Shipments WHERE SID 
 
 -- Get the SName equals to London.
 SELECT SName FROM Suppliers WHERE SName = 'London';
+
+-- Get the SName equals to London or Paris
+SELECT SName FROM Suppliers WHERE SName = 'London' OR SName = 'Paris';
