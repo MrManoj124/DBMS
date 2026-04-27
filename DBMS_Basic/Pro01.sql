@@ -198,3 +198,6 @@ SELECT SName FROM Suppliers WHERE SName = 'London';
 
 -- Get the SName equals to London or Paris
 SELECT SName FROM Suppliers WHERE SName = 'London' OR SName = 'Paris';
+
+-- Get the SName equals to London and Paris
+SELECT SName FROM Suppliers WHERE SName = 'London' AND SName = 'Paris';
