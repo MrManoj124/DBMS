@@ -177,3 +177,6 @@ SELECT DISTINCT PrID FROM Shipments WHERE SID IN (SELECT SID FROM Suppliers WHER
 
 -- Get the parts which are supplied more than 400 times in total.
 SELECT PID FROM Shipments GROUP BY PID HAVING SUM(Quantity) > 400;
+
+-- Get the suppliers who supply more than 300 parts in total.
+SELECT SID FROM Shipments GROUP BY SID HAVING SUM(Quantity) > 300;
