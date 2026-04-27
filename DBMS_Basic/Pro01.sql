@@ -171,3 +171,6 @@ INSERT INTO Suppliers (SID, SName, Status, SCity) VALUES ('S10','Smith', NULL,'N
 --Constract a table containing a list of part IDs that are supplied either by a London supplier or to a London project.
 SELECT DISTINCT PID FROM Shipments WHERE SID IN (SELECT SID FROM Suppliers WHERE SCity = 'London')
 OR PrID IN (SELECT PrID FROM Projects WHERE PrID = 'London');
+
+-- Construct a table containing a list of project IDs that are supplied by at least one supplier with status 20.
+SELECT DISTINCT PrID FROM Shipments WHERE SID IN (SELECT SID FROM Suppliers WHERE Status = 20);
