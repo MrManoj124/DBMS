@@ -222,3 +222,7 @@ SELECT SName FROM Suppliers WHERE ((SID IN (SELECT SID FROM Shipments GROUP BY S
 
 -- Get the SName which has above 300 quantity and Color is Red
 SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments WHERE PID IN (SELECT PID FROM Parts WHERE Colour = 'Red') GROUP BY SID HAVING SUM(Quantity) > 300);
+
+
+-- Get the SName which has above 300 quantity and Color is Red or Green
+SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments WHERE PID IN (SELECT PID FROM Parts WHERE Colour = 'Red' OR Colour = 'Green') GROUP BY SID HAVING SUM(Quantity) > 300);
