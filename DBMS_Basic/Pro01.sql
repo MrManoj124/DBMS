@@ -174,3 +174,6 @@ OR PrID IN (SELECT PrID FROM Projects WHERE PrID = 'London');
 
 -- Construct a table containing a list of project IDs that are supplied by at least one supplier with status 20.
 SELECT DISTINCT PrID FROM Shipments WHERE SID IN (SELECT SID FROM Suppliers WHERE Status = 20);
+
+-- Get the parts which are supplied more than 400 times in total.
+SELECT PID FROM Shipments GROUP BY PID HAVING SUM(Quantity) > 400;
