@@ -234,3 +234,8 @@ Parts WHERE Colour = 'Red' OR Colour = 'Green') GROUP BY SID HAVING SUM(Quantity
 -- Get the SName which has above 200 quantity and Color is Red or Green and city is London
 SELECT SName FROM Suppliers WHERE (SID IN (SELECT SID FROM Shipments WHERE PID IN (SELECT PID FROM
 Parts WHERE Colour = 'Red' OR Colour = 'Green') GROUP BY SID HAVING SUM(Quantity) > 200)) AND SCity = 'London');
+
+-- Use NOT to get the SName which has above 250 quantity 
+SELECT SName from Suppliers WHERE NOT SID IN (SELECT SID FROM Shipments GROUP BY SID HAVING SUM(Quantity) <= 250);
+
+-- 
