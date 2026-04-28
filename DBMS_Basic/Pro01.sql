@@ -238,4 +238,9 @@ Parts WHERE Colour = 'Red' OR Colour = 'Green') GROUP BY SID HAVING SUM(Quantity
 -- Use NOT to get the SName which has above 250 quantity 
 SELECT SName from Suppliers WHERE NOT SID IN (SELECT SID FROM Shipments GROUP BY SID HAVING SUM(Quantity) <= 250);
 
--- 
+-- Use LIMIT to get the top 3 suppliers with the highest quantity supplied
+SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments GROUP BY SID ORDER BY SUM (Quantity) DESC LIMIT 3);
+
+-- LIMIT is used to get limited number of records from the result set.
+
+-- Use LIMIT to get the top 3 suppliers with the highest quantity supplied and status above 20
