@@ -244,3 +244,4 @@ SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments GROUP BY SID
 -- LIMIT is used to get limited number of records from the result set.
 
 -- Use LIMIT to get the top 3 suppliers with the highest quantity supplied and status above 20
+SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipmets GROUP BY SID ORDER BY SUM (Quantity) DESC LIMIT 3) AND Status > 20 ;
