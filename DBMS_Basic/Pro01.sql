@@ -249,4 +249,15 @@ SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments GROUP BY SID
 -- add a query to get suppliers who supplies to PCity==London
 SELECT SCity from Suppliers WHERE SID IN (SELECT SID FROM Parts WHERE PCity == "London");
 
--- 
+-- Get the SName which has below 250 quantity
+SELECT SName from Suppliers WHERE SID IN (SELECT SID FROM Shipments GROUP BY SID HAVING SUM (Quantity) < 250);
+
+
+
+
+
+
+
+
+-- Get the SName which has above 300 quantity
+SELECT SName FROM Suppliers WHERE SID IN (SELECT SID FROM Shipments GROUP BY SID HAVING SUM(Quantity) > 300);
