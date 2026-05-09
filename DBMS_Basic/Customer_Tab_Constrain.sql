@@ -117,3 +117,8 @@ SELECT Employee_ID,
        First_Name,
        IFNULL(Hire_Date, '2008-03-17') AS Hire_Date
 FROM Employee;
+
+-- Permanent Update Version
+UPDATE Employee
+SET Hire_Date = '2008-03-17'
+WHERE Hire_Date IS NULL;
