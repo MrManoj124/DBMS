@@ -122,3 +122,11 @@ FROM Employee;
 UPDATE Employee
 SET Hire_Date = '2008-03-17'
 WHERE Hire_Date IS NULL;
+
+-- ii. Check duplicate First_Name and Last_Name
+SELECT First_Name,
+       Last_Name,
+       COUNT(*) AS Total
+FROM Employee
+GROUP BY First_Name, Last_Name
+HAVING COUNT(*) > 1;
