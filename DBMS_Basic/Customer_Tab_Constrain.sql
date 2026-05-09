@@ -130,3 +130,9 @@ SELECT First_Name,
 FROM Employee
 GROUP BY First_Name, Last_Name
 HAVING COUNT(*) > 1;
+
+-- iii. Check same Min_Salary and Max_Salary
+SELECT *
+FROM Job_Details
+WHERE Min_Salary = Max_Salary;
+
