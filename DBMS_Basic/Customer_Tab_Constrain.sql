@@ -8,7 +8,7 @@ CREATE TABLE Location (
 );
 
 
-CREATE TABLE Job_Details (
+CREATE TABLE Job_details (
     Job_ID VARCHAR(20) PRIMARY KEY,
     Job_Title VARCHAR(100) NOT NULL,
     Min_Salary DECIMAL(10,2) DEFAULT 5000 CHECK (Min_Salary > 0),
@@ -70,3 +70,15 @@ INSERT INTO Job_details VALUES('MK_MAN', 'Marketing Manager', 9000.0, 15000.0);
 INSERT INTO Job_details VALUES('MK_REP', 'Marketing Representative', 4000.0, 9000.0);
 INSERT INTO Job_details VALUES('HR_REP', 'Human Resources Representative', 4000.0, 9000.0);
 INSERT INTO Job_details VALUES('PR_REP', 'Public Relations Representative', 4500.0, 10500.0);
+
+INSERT INTO Department VALUES(10, 'Administration', 110, 1000);
+INSERT INTO Department VALUES(20, 'Marketing', 108, 1100);
+INSERT INTO Department VALUES(30, 'Purchasing', 114, 1100);
+INSERT INTO Department VALUES(40, 'Human Resources', 103, 1000);
+INSERT INTO Department VALUES(50, 'Shipping', 121, 1000);
+INSERT INTO Department VALUES(60, 'IT', 106, 1400);
+INSERT INTO Department VALUES(70, 'Public Relations', 125, 1300);
+INSERT INTO Department VALUES(80, 'Sales', 115, 1200);
+INSERT INTO Department VALUES(90, 'Executive', 100, 1300);
+INSERT INTO Department VALUES(100, 'Finance', 117, 1000);
+INSERT INTO Department VALUES(110, 'Accounting', 120, 1000);
