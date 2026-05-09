@@ -142,4 +142,6 @@ VALUES ('DEV_TRAINEE', 'Developer Trainee');
 
 -- v. Insert record with salary values that violate the CHECK constraint
 INSERT INTO Job_Details (Job_ID, Job_Title, Min_Salary, Max_Salary)
-VALUES ('DEV_INTERN', 'Developer Intern', -1000.00, 2000.00); -- This will violate the CHECK constraint for Min_Salary
+VALUES ('DEV_INTERN', 'Developer Intern', -1000.00, 2000.00);
+ -- This will violate the CHECK constraint for Min_Salary
+
