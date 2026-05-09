@@ -37,6 +37,10 @@ CREATE TABLE Employee (
     Job_ID VARCHAR(20),
     Department_ID INT,
 
-    
+    FOREIGN KEY (Job_ID)
+    REFERENCES Job_Details(Job_ID),
+
+    FOREIGN KEY (Department_ID)
+    REFERENCES Department(Department_ID)
 );
 
