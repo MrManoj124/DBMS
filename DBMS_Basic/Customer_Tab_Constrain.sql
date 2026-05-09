@@ -149,3 +149,7 @@ VALUES ('DEV_INTERN', 'Developer Intern', -1000.00, 2000.00);
 INSERT INTO Job_Details (Job_ID, Job_Title, Min_Salary, Max_Salary)
 VALUES ('DEV_SENIOR', 'Senior Developer', 5000.00, -10000.00);
  -- This will violate the CHECK constraint for Max_Salary
+
+-- i. Index on First_Name and Last_Name
+CREATE INDEX idx_emp_name
+ON Employee (First_Name, Last_Name);
