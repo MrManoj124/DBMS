@@ -110,3 +110,10 @@ INSERT INTO Employee VALUES(122, 'Pathma', 'Maaran', 'pmaaran@gmail.com', '2003-
 INSERT INTO Employee VALUES(123, 'Shanth', 'Velu', 'svelu@gmail.com', '2005-10-10',  6500.00, 'AC_ACCOUNT', 110);
 INSERT INTO Employee VALUES(124, 'Kevin', 'Mathu', 'kmathu@gmail.com', '2007-11-16', 5000.00, 'SH_CLERK', 50);
 INSERT INTO Employee VALUES(125, 'Julia', 'Nayer', 'jnayar@gmail.com', '2005-07-16', 4500.00, 'PR_REP',  70);
+
+
+-- i. Replace NULL Hire_Date with 2008-03-17 using IFNULL Display Version
+SELECT Employee_ID,
+       First_Name,
+       IFNULL(Hire_Date, '2008-03-17') AS Hire_Date
+FROM Employee;
