@@ -1,3 +1,4 @@
-create database customer_db;
+create database Human_Resource;
 
-use customer_db;
+use Human_Resource;
+
