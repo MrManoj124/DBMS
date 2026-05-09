@@ -136,3 +136,6 @@ SELECT *
 FROM Job_Details
 WHERE Min_Salary = Max_Salary;
 
+-- iv. Insert record using default salary values
+INSERT INTO Job_Details (Job_ID, Job_Title)
+VALUES ('DEV_TRAINEE', 'Developer Trainee');
