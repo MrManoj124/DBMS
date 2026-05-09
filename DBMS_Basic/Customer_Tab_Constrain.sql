@@ -44,3 +44,9 @@ CREATE TABLE Employee (
     REFERENCES Department(Department_ID)
 );
 
+INSERT INTO Location VALUES(1000, 'Colombo');
+INSERT INTO Location VALUES(1100, 'Vavuniya');
+INSERT INTO Location VALUES(1200, 'Anuradhapura');
+INSERT INTO Location VALUES(1300, 'Kandy');
+INSERT INTO Location VALUES(1400, 'Jaffna');
+
