@@ -26,3 +26,17 @@ CREATE TABLE Department (
     REFERENCES Location(Location_ID)
 );
 
+
+CREATE TABLE Employee (
+    Employee_ID INT PRIMARY KEY,
+    First_Name VARCHAR(50) NOT NULL,
+    Last_Name VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    Hire_Date DATE,
+    Salary DECIMAL(10,2) CHECK (Salary > 0),
+    Job_ID VARCHAR(20),
+    Department_ID INT,
+
+    
+);
+
