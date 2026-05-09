@@ -15,3 +15,14 @@ CREATE TABLE Job_Details (
     Max_Salary DECIMAL(10,2) DEFAULT 100000 CHECK (Max_Salary > 0)
 );
 
+
+CREATE TABLE Department (
+    Department_ID INT PRIMARY KEY,
+    Department_Name VARCHAR(100) NOT NULL DEFAULT 'HR',
+    Manager_ID INT NOT NULL,
+    Location_ID INT NOT NULL,
+    
+    FOREIGN KEY (Location_ID)
+    REFERENCES Location(Location_ID)
+);
+
