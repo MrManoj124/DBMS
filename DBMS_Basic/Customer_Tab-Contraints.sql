@@ -132,4 +132,11 @@ INSERT INTO PRODUCTS VALUES (002, 'Mathan Ran', 'Ranchi', '2023-
 -- Check Constraint on an Existing Column
 -- ALTER TABLE table_name
 -- ADD constraint constraint_name check (ColumnName condition_value);
- 
+ CREATE TABLE CUSTOMERS_4 (
+ID INT NOT NULL,
+NAME VARCHAR(20) NOT NULL,
+AGE INT NOT NULL,
+ADDRESS CHAR (25),
+SALARY DECIMAL (18, 2),
+PRIMARY KEY (ID)
+);
