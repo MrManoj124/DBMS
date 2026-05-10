@@ -98,3 +98,8 @@ SALARY DECIMAL (18, 2) CHECK(SALARY >= 20000),
 PRIMARY KEY (ID)
 );
 
+-- Execute the following statement to list down the constraints implemeted on CUSTOMERS_3.
+-- check the constraints of the table
+select table_name, constraint_type, constraint_name from information_schema.table_constraints where table_name = 'CUSTOMERS_3';
+
+
