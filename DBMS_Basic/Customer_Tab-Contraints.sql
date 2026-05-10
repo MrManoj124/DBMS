@@ -140,3 +140,7 @@ ADDRESS CHAR (25),
 SALARY DECIMAL (18, 2),
 PRIMARY KEY (ID)
 );
+
+-- Execute the following statement to list down the constraints implemented on CUSTOMERS_4.
+select table_name, constraint_type, constraint_name, from information_schema.table_constraints where table_name='CUSTOMERS_4';
+
