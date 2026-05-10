@@ -146,3 +146,6 @@ select table_name, constraint_type, constraint_name, from information_schema.tab
 
 -- Execute the following MySql Statement
 alter table CUSTOMERS_4 ADD CONSTRAINT Constraint_Age check (AGE >= 21);
+
+-- Execute the following statement to list down the constraints implemented on CUSTOMERS_4.
+select table_name, constraint_type, constraint_name from information_schema.table_constraints where table_name='CUSTOMERS_4';
