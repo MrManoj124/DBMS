@@ -118,3 +118,7 @@ PRIMARY KEY(PID),
 CONSTRAINT Constraint_DOO CHECK(DATE_OF_ORDER <= '2023-
 02-09')
 );
+
+-- Execute the following statement to list down the constraint implemented on CUSTOMERS_3
+select table_name, constraint_type, constraint_name from information_schema.table_constraints where table_name='PRODUCTS';
+
