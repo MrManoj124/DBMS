@@ -164,6 +164,9 @@ on Employee(Salary);
 create index idx_emp_department
 on Employee(Department_ID);
 
-
+-- Create a composite index on the attributes Job_title and Max_salary for the Job_Details relation.
+-- iv.Composite index on Job_Title and Max_Salary 
+create index idx_job_title_salary
+on Job_Details(Job_Title, Max_Salary);
 
 
