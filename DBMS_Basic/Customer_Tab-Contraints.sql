@@ -84,3 +84,7 @@ SELECT * FROM CUSTOMERS_2;
 INSERT INTO CUSTOMERS_2 (ID,NAME,AGE,ADDRESS,SALARY) VALUES
 (9, ‘Nimal’, 19, ‘Colombo’, 3000.00 );
 
+-- check the new constraints with null value
+INSERT INTO CUSTOMERS_2 (ID,NAME,AGE,ADDRESS,SALARY) VALUES
+(10, ‘Saman’, NULL, ‘Colombo’, 3000.00 );
+
