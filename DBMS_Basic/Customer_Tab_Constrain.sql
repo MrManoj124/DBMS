@@ -153,3 +153,8 @@ VALUES ('DEV_SENIOR', 'Senior Developer', 5000.00, -10000.00);
 -- i. Index on First_Name and Last_Name
 CREATE INDEX idx_emp_name
 ON Employee (First_Name, Last_Name);
+
+-- ii. Index on Salary
+create index idx_emp_salary
+on Employee(Salary);
+
