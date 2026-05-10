@@ -128,3 +128,8 @@ insert into products values (001, 'Malith thennakon','Ranchi','2024-01-12',5000)
 -- Insert a new record
 INSERT INTO PRODUCTS VALUES (002, 'Mathan Ran', 'Ranchi', '2023-
 03-11', 2000);
+
+-- Check Constraint on an Existing Column
+-- ALTER TABLE table_name
+-- ADD constraint constraint_name check (ColumnName condition_value);
+ 
