@@ -30,3 +30,7 @@ CUSTOMERS;
 
 -- check NULLIF() function with different values 
 SELECT NAME, ADDRESS, nullif(NAME, SALARY) AS Result FROM CUSTOMERS;
+
+
+-- The IFNULL() Function
+SELECT NAME, SALARY, IFNULL(SALARY, 0) AS Salary FROM CUSTOMERS;
