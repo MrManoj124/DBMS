@@ -72,3 +72,7 @@ INSERT INTO CUSTOMERS_2 VALUES
 SELECT table_name, constraint_type, constraint_name FROM
 information_schema.table_constraints WHERE
 table_name='CUSTOMERS_2';
+
+-- Add a new record that violates the CHECK constraint
+INSERT INTO CUSTOMERS_2 (ID,NAME,AGE,ADDRESS,SALARY) VALUES
+(8, ‘Mithilan’, 15, ‘Vanni’, 2000.00 );
