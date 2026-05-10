@@ -34,3 +34,6 @@ SELECT NAME, ADDRESS, nullif(NAME, SALARY) AS Result FROM CUSTOMERS;
 
 -- The IFNULL() Function
 SELECT NAME, SALARY, IFNULL(SALARY, 0) AS Salary FROM CUSTOMERS;
+
+-- Example of IFNULL() function with non-null value
+SELECT NAME, ADDRESS, IFNULL(ADDRESS, "No Address") AS Address FROM CUSTOMERS;
