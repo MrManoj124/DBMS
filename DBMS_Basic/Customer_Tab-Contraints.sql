@@ -102,4 +102,6 @@ PRIMARY KEY (ID)
 -- check the constraints of the table
 select table_name, constraint_type, constraint_name from information_schema.table_constraints where table_name = 'CUSTOMERS_3';
 
-
+-- check the constraint with a new record
+insert into CUSTOMERS_3 (ID, NAME, AGE, ADDRESS, SALARY) VALUES 
+(1, 'Sri', 30, 'Vanni', 2000.00);
