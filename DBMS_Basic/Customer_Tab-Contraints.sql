@@ -21,3 +21,5 @@ INSERT INTO CUSTOMERS VALUES
 (6, ‘Anushi’, 27, ‘Vavuniya’, NULL ),
 (7, ‘Mahi’, 28, ‘Mahi’, 10000.00 );
 
+-- Check NULLIF() function
+SELECT ID, NAME, NULLIF(ADDRESS, "Colombo") AS ADDRESS FROM CUSTOMERS;
