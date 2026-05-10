@@ -124,3 +124,7 @@ select table_name, constraint_type, constraint_name from information_schema.tabl
 
 -- Execute the following MySql statement and observe the result;
 insert into products values (001, 'Malith thennakon','Ranchi','2024-01-12',5000);
+
+-- Insert a new record
+INSERT INTO PRODUCTS VALUES (002, 'Mathan Ran', 'Ranchi', '2023-
+03-11', 2000);
