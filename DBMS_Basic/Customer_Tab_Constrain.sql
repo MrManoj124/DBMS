@@ -171,6 +171,13 @@ on Job_Details(Job_Title, Max_Salary);
 
 -- v. Composite index on First_Name and Email
 create index idx_job_Firstname_Email
-on Employee(First_Name, Email)
+on Employee(First_Name, Email);
+
+-- Create a composite index on the attributes Department_Name and Location_ID for the Department relation.
+create index idx_deptname_Location
+on Department(Department_name, Location_ID);
+
+-- List down the relational_schema, relation_name and index_name, and column_name of created indexes for the database Human_Resource.
+
 
 
