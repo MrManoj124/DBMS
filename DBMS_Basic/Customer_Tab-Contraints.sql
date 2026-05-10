@@ -105,3 +105,16 @@ select table_name, constraint_type, constraint_name from information_schema.tabl
 -- check the constraint with a new record
 insert into CUSTOMERS_3 (ID, NAME, AGE, ADDRESS, SALARY) VALUES 
 (1, 'Sri', 30, 'Vanni', 2000.00);
+
+
+-- An alternate method to define Check Constraint
+CREATE TABLE PRODUCTS(
+PID INT NOT NULL,
+PNAME VARCHAR(30),
+DELIVERY_CITY VARCHAR(20),
+DATE_OF_ORDER Date NOT NULL,
+PRICE INT,
+PRIMARY KEY(PID),
+CONSTRAINT Constraint_DOO CHECK(DATE_OF_ORDER <= '2023-
+02-09')
+);
