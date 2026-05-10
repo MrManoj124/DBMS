@@ -184,3 +184,6 @@ select TABLE_SCHEMA as relation_schema,
         COLUMN_NAME as column_name
 from INFORMATION_SCHEMA.STATISTICS
 where TABLE_SCHEMA = 'Human_Resource';
+
+-- Drop the created indexes.
+drop index idx_emp_name on Employee;
