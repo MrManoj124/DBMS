@@ -76,3 +76,11 @@ table_name='CUSTOMERS_2';
 -- Add a new record that violates the CHECK constraint
 INSERT INTO CUSTOMERS_2 (ID,NAME,AGE,ADDRESS,SALARY) VALUES
 (8, ‘Mithilan’, 15, ‘Vanni’, 2000.00 );
+
+-- check the records in the table
+SELECT * FROM CUSTOMERS_2;
+
+-- check the new constraint with another record
+INSERT INTO CUSTOMERS_2 (ID,NAME,AGE,ADDRESS,SALARY) VALUES
+(9, ‘Nimal’, 19, ‘Colombo’, 3000.00 );
+
