@@ -48,3 +48,13 @@ SELECT NAME, SALARY, IFNULL(SALARY, 0) AS Salary FROM CUSTOMERS WHERE ID = 4;
 -- Practice of COALESCE() function
 SELECT NAME, ADDRESS, COALESCE(ADDRESS, "No Address") AS Address FROM CUSTOMERS;
 -- this will return the first non-null value in the list, which is the ADDRESS column. If ADDRESS is null, it will return "No Address".
+
+-- create a new table with a CHECK constaints
+CREATE TABLE CUSTOMERS_2 (
+ID INT NOT NULL,
+NAME VARCHAR (20) NOT NULL,
+AGE INT NOT NULL CHECK(AGE>=20),
+ADDRESS CHAR (25),
+SALARY DECIMAL (18, 2),
+PRIMARY KEY (ID)
+);
