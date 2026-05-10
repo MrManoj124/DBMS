@@ -178,6 +178,9 @@ create index idx_deptname_Location
 on Department(Department_name, Location_ID);
 
 -- List down the relational_schema, relation_name and index_name, and column_name of created indexes for the database Human_Resource.
-
-
-
+select TABLE_SCHEMA as relation_schema,
+        TABLE_NAME as relation_name, 
+        INDEX_NAME as index_name,
+        COLUMN_NAME as column_name
+from INFORMATION_SCHEMA.STATISTICS
+where TABLE_SCHEMA = 'Human_Resource';
