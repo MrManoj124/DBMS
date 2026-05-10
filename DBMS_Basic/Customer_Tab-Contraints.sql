@@ -58,3 +58,12 @@ ADDRESS CHAR (25),
 SALARY DECIMAL (18, 2),
 PRIMARY KEY (ID)
 );
+
+INSERT INTO CUSTOMERS_2 VALUES
+(1, ‘Sunath’, 30, ‘Colombo’, 2000.00 ),
+(2, ‘kamal’, 28, ‘Jaffna’, 1500.00 ),
+(3, ‘Mala’, 25, ‘Kandy’, NULL ),
+(4, ‘Manuja’, 26, ‘Gampaha’, 6500.00 ),
+(5, ‘Kathees’, 22, ‘Anuradhapura’, 8500.00 ),
+(6, ‘Anushi’, 27, ‘Vavuniya’, NULL ),
+(7, ‘Mahi’, 28, ‘Mahi’, 10000.00 );
