@@ -160,13 +160,10 @@ create index idx_emp_salary
 on Employee(Salary);
 
 -- Create index on the attributes Department_Id for the Employee relation.
--- Index on Department_ID in Employee table
+-- iii.Index on Department_ID in Employee table
 create index idx_emp_department
 on Employee(Department_ID);
 
--- Create a composite index on the attributes Job_title and Max_salary for the Job_Details relation.
--- Composite index on Job_Title and Max_Salary 
-create index idx_job_title_salary
-on Job_Details(Job_Title, Max_Salary);
+
 
 
