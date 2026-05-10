@@ -44,3 +44,7 @@ SELECT NAME, ADDRESS, IFNULL(ADDRESS, "No Address") AS Address FROM CUSTOMERS WH
 
 -- example of IFNULL() function with another non-null value
 SELECT NAME, SALARY, IFNULL(SALARY, 0) AS Salary FROM CUSTOMERS WHERE ID = 4;
+
+-- Practice of COALESCE() function
+SELECT NAME, ADDRESS, COALESCE(ADDRESS, "No Address") AS Address FROM CUSTOMERS;
+-- this will return the first non-null value in the list, which is the ADDRESS column. If ADDRESS is null, it will return "No Address".
