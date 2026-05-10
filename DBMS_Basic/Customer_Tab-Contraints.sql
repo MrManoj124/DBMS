@@ -27,3 +27,6 @@ SELECT ID, NAME, NULLIF(ADDRESS, "Colombo") AS ADDRESS FROM CUSTOMERS;
 -- check NULLIF() function with same values
 SELECT NAME, ADDRESS, NULLIF(NAME, ADDRESS) AS Result FROM
 CUSTOMERS;
+
+-- check NULLIF() function with different values 
+SELECT NAME, ADDRESS, nullif(NAME, SALARY) AS Result FROM CUSTOMERS;
