@@ -67,3 +67,8 @@ INSERT INTO CUSTOMERS_2 VALUES
 (5, ‘Kathees’, 22, ‘Anuradhapura’, 8500.00 ),
 (6, ‘Anushi’, 27, ‘Vavuniya’, NULL ),
 (7, ‘Mahi’, 28, ‘Mahi’, 10000.00 );
+
+-- Check the constraints of the table
+SELECT table_name, constraint_type, constraint_name FROM
+information_schema.table_constraints WHERE
+table_name='CUSTOMERS_2';
