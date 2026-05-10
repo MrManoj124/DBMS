@@ -169,4 +169,8 @@ on Employee(Department_ID);
 create index idx_job_title_salary
 on Job_Details(Job_Title, Max_Salary);
 
+-- v. Composite index on First_Name and Email
+create index idx_job_Firstname_Email
+on Employee(First_Name, Email)
+
 
