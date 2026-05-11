@@ -169,3 +169,13 @@ column3 datatype,
 .....
 columnN datatype ); */
 
+
+-- create new table
+CREATE TABLE CUSTOMERS_5 (
+ID INT NOT NULL,
+NAME VARCHAR (20) NOT NULL DEFAULT 'Mithilan',
+AGE INT NOT NULL DEFAULT '32',
+ADDRESS CHAR (25) DEFAULT 'Colombo',
+SALARY DECIMAL (18, 2) DEFAULT '2000',
+PRIMARY KEY (ID)
+);
