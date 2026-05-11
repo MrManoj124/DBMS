@@ -149,3 +149,8 @@ alter table CUSTOMERS_4 ADD CONSTRAINT Constraint_Age check (AGE >= 21);
 
 -- Execute the following statement to list down the constraints implemented on CUSTOMERS_4.
 select table_name, constraint_type, constraint_name from information_schema.table_constraints where table_name='CUSTOMERS_4';
+
+
+-- === Removing check constraint === 
+-- Syntax for Removing check constraint
+-- ALTER TABLE table_name DROP CONSTRAINT constraint_name;
