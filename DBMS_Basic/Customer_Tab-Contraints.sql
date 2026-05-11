@@ -160,3 +160,12 @@ ALTER TABLE CUSTOMERS_4 DROP CONSTRAINT Constraint_Age;
 -- check the constraints implemented on CUSTOMERS_4 
 select table_name, constraint_type, constraint_name from information_schema.table_constraints where table_name=CUSTOMERS_4;
 
+-- The SQL DEFAULT Constraint
+-- Syntax for default constraint
+/* CREATE TABLE table_name (
+column1 datatype DEFAULT default_value,
+column2 datatype DEFAULT default_value,
+column3 datatype,
+.....
+columnN datatype ); */
+
