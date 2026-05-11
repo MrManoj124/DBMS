@@ -221,4 +221,7 @@ SELECT * FROM BUYERS WHERE ID = 01;
 
 -- Add a drop function to drop the default value
 ALTER TABLE CUSTOMERS_5 ALTER ADDRESS DROP DEFAULT;
+
 DESC CUSTOMERS_5;
+
+
