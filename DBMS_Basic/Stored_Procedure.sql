@@ -19,3 +19,14 @@ END $$
 DELIMITER;
 
 CALL show_message();
+
+
+-- Example 02 :
+Write a procedure to retrieve all the details of customers with the given age.
+DELIMITER //
+CREATE PROCEDURE GetCustomerInfo(IN CustomerAge INT)
+BEGIN 
+    SELECT * FROM CUSTOMERS WHERE AGE = CusomerAge;
+END //
+
+DELIMITER;
