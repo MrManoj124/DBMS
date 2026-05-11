@@ -154,3 +154,7 @@ select table_name, constraint_type, constraint_name from information_schema.tabl
 -- === Removing check constraint === 
 -- Syntax for Removing check constraint
 -- ALTER TABLE table_name DROP CONSTRAINT constraint_name;
+
+ALTER TABLE CUSTOMERS_4 DROP CONSTRAINT Constraint_Age;
+
+
