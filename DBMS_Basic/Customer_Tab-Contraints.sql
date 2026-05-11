@@ -193,3 +193,11 @@ SELECT * FROM CUSTOMERS_5;
 INSERT INTO CUSTOMERS_5 VALUES
 (3, 'Kanthan', DEFAULT, DEFAULT, 2000.00),
 (4, 'Chithra', DEFAULT, DEFAULT, DEFAULT);
+
+SELECT * FROM CUSTOMERS_5;
+
+
+-- Set the default value on an existing table attribute
+-- Syntax for default value 
+ALTER TABLE table_name
+ALTER column_name SET DEFAULT 'default_value';
