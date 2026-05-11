@@ -188,3 +188,8 @@ INSERT INTO CUSTOMERS_5 VALUES (2, 'Mathan', 25, 'Vavuniya',
 -- Get all the records from CUSTOMERS_5 table
 SELECT * FROM CUSTOMERS_5;
 
+
+-- Passing "DEFAULT" as value
+INSERT INTO CUSTOMERS_5 VALUES
+(3, 'Kanthan', DEFAULT, DEFAULT, 2000.00),
+(4, 'Chithra', DEFAULT, DEFAULT, DEFAULT);
