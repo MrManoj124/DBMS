@@ -201,3 +201,13 @@ SELECT * FROM CUSTOMERS_5;
 -- Syntax for default value 
 ALTER TABLE table_name
 ALTER column_name SET DEFAULT 'default_value';
+
+-- create Buyers table
+CREATE TABLE BUYERS (
+ID INT NOT NULL,
+NAME VARCHAR (20) NOT NULL,
+AGE INT NOT NULL,
+ADDRESS CHAR (25),
+SALARY DECIMAL (18, 2),
+PRIMARY KEY (ID)
+);
