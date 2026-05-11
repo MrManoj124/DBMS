@@ -157,4 +157,6 @@ select table_name, constraint_type, constraint_name from information_schema.tabl
 
 ALTER TABLE CUSTOMERS_4 DROP CONSTRAINT Constraint_Age;
 
+-- check the constraints implemented on CUSTOMERS_4 
+select table_name, constraint_type, constraint_name from information_schema.table_constraints where table_name=CUSTOMERS_4;
 
