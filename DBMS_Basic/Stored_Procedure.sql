@@ -30,3 +30,7 @@ BEGIN
 END //
 
 DELIMITER;
+
+
+-- Execute the procedure by passing different values for the parameter.
+CALL GetCustomerInfo(25);
