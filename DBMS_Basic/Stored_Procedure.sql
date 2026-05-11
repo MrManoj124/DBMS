@@ -9,3 +9,13 @@ DELIMITER;
 To Execute the procedure;
 CALL <Procedure name>;
 
+
+-- Example 01 :
+DELIMITER $$
+CREATE PROCEDURE show_message()
+BEGIN 
+    SELECT 'Welcome to MySql Stored Procedures';
+END $$
+DELIMITER;
+
+CALL show_message();
