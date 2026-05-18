@@ -82,3 +82,12 @@ create procedure GetMaxSalary()
     select MAX(Salary) AS Max_Salary from Customers;
 end $$
 DELIMITER ;
+
+
+-- Get total Salary of All customers
+DELIMITER $$
+create procedure GetTotalSalary()
+begin 
+    select SUM(Salary) AS Total_Salary from Customers;
+end $$
+DELIMITER ;
