@@ -48,3 +48,13 @@ begin
     select name, age from Customers where Customer_Id = CustId;
 END $$;
 DELIMITER ;  
+
+
+-- Get Age Salary by name
+DELIMITER $$
+create procedure GetSalaryandAgeByID(IN Custname VARCHAR(50))
+begin 
+    select age, salary from Customers where name = Custname;
+end $$
+DELIMITER ;
+
