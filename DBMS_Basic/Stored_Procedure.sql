@@ -76,3 +76,9 @@ end $$
 DELIMITER ;
 
 
+-- Get Maximum Salary
+DELIMITER $$
+create procedure GetMaxSalary()
+    select MAX(Salary) AS Max_Salary from Customers;
+end $$
+DELIMITER ;
