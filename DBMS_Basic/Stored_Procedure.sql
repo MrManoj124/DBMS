@@ -1,3 +1,5 @@
+-- Continue the procedure with Customers_db; 
+
 -- Syntax
 DELIMITER $$
 CREATE PROCEDURE procedure_name (parameter_1, datatype_1, parameter_2, datatype_2, ...)
@@ -39,4 +41,3 @@ CALL GetCustomerInfo(40);
 CALL GetCustomerInfo(10);
 
 
-// 
