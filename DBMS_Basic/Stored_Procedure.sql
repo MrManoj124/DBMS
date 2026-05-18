@@ -34,3 +34,9 @@ DELIMITER;
 
 -- Execute the procedure by passing different values for the parameter.
 CALL GetCustomerInfo(25);
+CALL GetCustomerInfo(35);
+CALL GetCustomerInfo(40);
+CALL GetCustomerInfo(10);
+
+
+// 
