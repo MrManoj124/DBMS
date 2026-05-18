@@ -113,3 +113,16 @@ BEGIN
 END $$
 
 DELIMITER ;
+
+
+-- # Count customers in age range
+DELIMITER $$
+
+CREATE PROCEDURE CountCustomersByAgeRange(IN minAge INT, IN maxAge INT)
+BEGIN
+    SELECT COUNT(*) AS total_customers 
+    FROM customers 
+    WHERE age BETWEEN minAge AND maxAge;
+END $$
+
+DELIMITER ;
