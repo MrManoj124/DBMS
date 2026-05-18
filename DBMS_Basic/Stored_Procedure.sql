@@ -58,3 +58,13 @@ begin
 end $$
 DELIMITER ;
 
+
+-- Get Customer age range
+DELIMITER $$
+create procedure GetCustomerAgeRange(IN minAge INT, IN maxAge INT)
+begin 
+    select * from Customers where age between minAge and maxAge;
+end $$
+DELIMITER ;
+
+
