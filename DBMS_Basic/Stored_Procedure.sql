@@ -147,4 +147,7 @@ DELIMITER ;
 
 call GetCustomersWithNameStartingWith('M');
 call GetCustomersWithHighSalary(3000.00);
+call CountCustomersByAgeRange(25, 35);
+call GetAddress('Mithilan');
+call GetAverageAge();
 
