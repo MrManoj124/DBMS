@@ -135,3 +135,12 @@ begin
     select * from Customers where Salary > minSalary;
 end $$
 DELIMITER ;
+
+
+-- Get customers with name starting with a certain letter
+DELIMITER $$
+create procedure GetCustomersWithNameStartingWith(IN prefix VARCHAR(50))
+begin 
+    select * from Customers where Name LIKE CONCAT(prefix, '%');
+end $$
+DELIMITER ;
