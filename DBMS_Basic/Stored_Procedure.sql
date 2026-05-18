@@ -101,3 +101,15 @@ begin
 end $$
 DELIMITER;
 
+
+-- # Get address by name (duplicate of earlier, still correct)
+DELIMITER $$
+
+CREATE PROCEDURE GetAddress(IN custName VARCHAR(100))
+BEGIN
+    SELECT address 
+    FROM customers 
+    WHERE name = custName;
+END $$
+
+DELIMITER ;
