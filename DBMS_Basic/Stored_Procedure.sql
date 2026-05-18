@@ -41,3 +41,10 @@ CALL GetCustomerInfo(40);
 CALL GetCustomerInfo(10);
 
 
+-- Get Customers name and age by Id
+DELIMITER $$
+create procedure GetNameandAge(IN CustId INT)
+begin 
+    select name, age from Customers where Customer_Id = CustId;
+END $$;
+DELIMITER ;  
