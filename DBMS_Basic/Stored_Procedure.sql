@@ -126,3 +126,12 @@ BEGIN
 END $$
 
 DELIMITER ;
+
+
+-- Get customers with salary above a certain amount
+DELIMITER $$
+create procedure GetCustomersWithHighSalary(IN minSalary DECIMAL(18, 2))
+begin 
+    select * from Customers where Salary > minSalary;
+end $$
+DELIMITER ;
