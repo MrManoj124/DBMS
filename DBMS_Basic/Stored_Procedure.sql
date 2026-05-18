@@ -144,3 +144,6 @@ begin
     select * from Customers where Name LIKE CONCAT(prefix, '%');
 end $$
 DELIMITER ;
+
+call GetCustomersWithNameStartingWith('M');
+
