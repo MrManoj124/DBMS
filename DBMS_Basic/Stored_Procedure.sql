@@ -146,4 +146,5 @@ end $$
 DELIMITER ;
 
 call GetCustomersWithNameStartingWith('M');
+call GetCustomersWithHighSalary(3000.00);
 
