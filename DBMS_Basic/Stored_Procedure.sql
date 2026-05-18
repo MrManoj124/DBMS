@@ -91,3 +91,13 @@ begin
     select SUM(Salary) AS Total_Salary from Customers;
 end $$
 DELIMITER ;
+
+
+-- get Customers Average age
+DELIMITER $$
+create procedure GetAverageAge()
+begin
+    select AVG(age) AS Average_age from Customers;
+end $$
+DELIMITER;
+
