@@ -68,3 +68,11 @@ end $$
 DELIMITER ;
 
 
+-- Get Minimum Salary
+DELIMITER $$
+create procedure GetMinSalary()
+    select MIN(Salary) AS Min_Salary from Customers;
+end $$
+DELIMITER ;
+
+
