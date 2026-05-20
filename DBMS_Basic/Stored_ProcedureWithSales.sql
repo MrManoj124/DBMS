@@ -34,3 +34,12 @@ CREATE TABLE OrderDetails (
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
 );
+
+
+-- Payments table
+CREATE TABLE Payments (
+    PaymentID INT PRIMARY KEY, 
+    OrderID INT,
+    AmountPaid DECIMAL(10,2),
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+);
