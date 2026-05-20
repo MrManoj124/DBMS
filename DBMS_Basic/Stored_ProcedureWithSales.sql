@@ -15,3 +15,11 @@ create table Products(
     ProductName varchar(50),
     Price decimal(10, 2)    
 );
+
+-- Orders table
+create table Orders(
+    OrderID int primary key,
+    CustomerID int,
+    OrderDate date,
+    foreign key(CustomerID) references Custmomers(CustomerID)
+);
