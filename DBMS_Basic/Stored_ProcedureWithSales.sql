@@ -10,3 +10,8 @@ create table Customers(
 );
 
 -- Products table
+create table Products(
+    ProductID int primary key,
+    ProductName varchar(50),
+    Price decimal(10, 2)    
+);
