@@ -83,3 +83,17 @@ INSERT INTO Orders(OrderID, CustomerID, OrderDate) VALUES
 (9,9,'2024-01-09'),
 (10,10,'2024-01-10'),
 (11,1,'2024-01-11');
+
+
+INSERT INTO OrderDetails(OrderDetailID, OrderID, ProductID, Quantity) VALUES
+(1,1,1,1),
+(2,1,2,2),
+(3,2,3,1),
+(4,3,4,1),
+(5,4,5,1),
+(6,5,6,1),
+(7,6,7,1),
+(8,7,8,2),
+(9,8,9,1),
+(10,9,10,3),
+(11,10,11,2);
