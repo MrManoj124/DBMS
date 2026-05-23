@@ -110,3 +110,12 @@ INSERT INTO Payments(PaymentID, OrderID, AmountPaid) VALUES
 (9,9,18000),
 (10,10,6000),
 (11,11,20000);
+
+
+-- 1.Get Customer details for a given customer ID
+DELIMITER //
+create procedure GetCustomerDetails(IN custID int)
+begin
+    select * from Customers where CustomerID = custID;
+end // 
+
