@@ -119,3 +119,11 @@ begin
     select * from Customers where CustomerID = custID;
 end // 
 
+
+-- 2.Get Orders by customer ID
+create procedure GetOrdersByCustomerID(IN custID int)
+begin 
+    select * from Orders where CustomerID = custID;
+end //
+
+
