@@ -133,5 +133,12 @@ begin
 end //
 
 
+-- 4. Get total amount paid for a given order ID
+create procedure GetTotalAmountPaidByOrderID(IN orderID int)
+begin
+    select sum(AmountPaid) as TotalAmountPaid from Payments where OrderID = orderID;
+end //
+
+
 
 
