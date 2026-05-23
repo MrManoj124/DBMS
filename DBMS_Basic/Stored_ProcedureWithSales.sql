@@ -43,3 +43,17 @@ CREATE TABLE Payments (
     AmountPaid DECIMAL(10,2),
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
 );
+
+-- Insert sample data
+INSERT INTO Customers(CustomerID, Name, City) VALUES
+(1,'Nimal','Colombo'),
+(2,'Kamal','Kandy'),
+(3,'Sunil','Galle'),
+(4,'Amal','Jaffna'),
+(5,'Ravi','Colombo'),
+(6,'Saman','Kurunegala'),
+(7,'Nadee','Matara'),
+(8,'Kumari','Kandy'),
+(9,'Rohan','Galle'),
+(10,'Dilani','Colombo'),
+(11,'Ishara','Colombo');
