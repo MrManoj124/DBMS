@@ -139,6 +139,11 @@ begin
     select sum(AmountPaid) as TotalAmountPaid from Payments where OrderID = orderID;
 end //
 
+-- 5. Get product details for a given productID
+create procedure GetProductByID(IN prodID int)
+begin
+    select * from Products where ProductID = prodID;
+end //
 
 
 
