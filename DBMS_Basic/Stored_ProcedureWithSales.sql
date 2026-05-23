@@ -154,3 +154,9 @@ begin
     join Customers c on o.CustomerID = c.CustomerID;
 end //
 
+-- 7. Get customer details by city
+DELIMITER $$
+CREATE PROCEDURE GetCustomersByCity(IN cityName VARCHAR(50))
+BEGIN
+    SELECT * FROM Customers WHERE City = cityName;
+END$$
