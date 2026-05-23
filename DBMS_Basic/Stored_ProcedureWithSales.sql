@@ -146,4 +146,11 @@ begin
 end //
 
 
+-- 6. Get all orders along with customer names
+create procedure GetAllOrdersWithCustomerNames()
+begin
+    select o.OrderID, c.Name as CustomerName, o.OrderDate
+    from Orders o
+    join Customers c on o.CustomerID = c.CustomerID;
+end //
 
