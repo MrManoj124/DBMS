@@ -160,3 +160,10 @@ CREATE PROCEDURE GetCustomersByCity(IN cityName VARCHAR(50))
 BEGIN
     SELECT * FROM Customers WHERE City = cityName;
 END$$
+
+-- 8. Get products above a given price
+DELIMITER $$
+CREATE PROCEDURE GetProductsAbovePrice(IN minPrice DECIMAL(10,2))
+BEGIN
+    SELECT * FROM Products WHERE Price > minPrice;
+END$$
