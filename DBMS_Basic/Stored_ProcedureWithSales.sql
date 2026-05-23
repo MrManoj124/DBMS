@@ -126,4 +126,12 @@ begin
     select * from Orders where CustomerID = custID;
 end //
 
+-- 3.Get Order details by order ID
+create procedure GetOrderDetailsByOrderID(IN orderID int)
+begin
+    select * from OrderDetails where OrderId = orderID;
+end //
+
+
+
 
