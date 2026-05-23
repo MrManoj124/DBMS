@@ -97,3 +97,16 @@ INSERT INTO OrderDetails(OrderDetailID, OrderID, ProductID, Quantity) VALUES
 (9,8,9,1),
 (10,9,10,3),
 (11,10,11,2);
+
+INSERT INTO Payments(PaymentID, OrderID, AmountPaid) VALUES
+(1,1,152000),
+(2,2,5000),
+(3,3,30000),
+(4,4,25000),
+(5,5,80000),
+(6,6,120000),
+(7,7,14000),
+(8,8,90000),
+(9,9,18000),
+(10,10,6000),
+(11,11,20000);
