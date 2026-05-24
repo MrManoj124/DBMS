@@ -117,3 +117,17 @@ DELIMITER ;
 
 -- Test the updation with trigger
 update Products set StockQuantity = -2 where ProductID = 1;
+
+-- update the trigger with price
+DELIMITER //
+create trigger update_price_trigger
+after update 
+on Products
+for each row
+begin
+	if NEW.Price < 0 then 
+    signal sqlstate '13000'
+    set message_text = "Price cannot be negative";
+    end if;
+end //
+DELIMITER ;
