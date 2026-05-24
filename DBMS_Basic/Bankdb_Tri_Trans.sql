@@ -24,3 +24,18 @@ create table Accounts(
     
     foreign key(BranchID) references Branches(BranchID)
 );
+
+
+INSERT INTO Customers VALUES
+(1, 'Alice', 'Colombo'),
+(2, 'Bob', 'Kandy'),
+(3, 'Charlie', 'Galle'),
+(4, 'David', 'Jaffna'),
+(5, 'Eva', 'Negombo'),
+(6, 'Frank', 'Kurunegala'),
+(7, 'Grace', 'Matara'),
+(8, 'Hannah', 'Anuradhapura'),
+(9, 'Ishan', 'Batticaloa'),
+(10, 'Julia', 'Trincomalee'),
+(11, 'Kevin', 'Ratnapura'),
+(12, 'Lara', 'Badulla');
