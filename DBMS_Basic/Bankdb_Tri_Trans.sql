@@ -8,3 +8,8 @@ create table Customers(
     City Varchar(30)
 );
 
+create table Branches(
+	BranchID int primary key auto_increment,
+    BranchName varchar(50),
+    Location varchar(50)
+);
