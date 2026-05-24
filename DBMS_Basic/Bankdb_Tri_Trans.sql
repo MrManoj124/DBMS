@@ -39,3 +39,17 @@ INSERT INTO Customers VALUES
 (10, 'Julia', 'Trincomalee'),
 (11, 'Kevin', 'Ratnapura'),
 (12, 'Lara', 'Badulla');
+
+INSERT INTO Branches VALUES
+(1, 'Main Branch', 'Colombo'),
+(2, 'City Branch', 'Kandy'),
+(3, 'Coastal Branch', 'Galle'),
+(4, 'North Branch', 'Jaffna'),
+(5, 'Airport Branch', 'Negombo'),
+(6, 'Central Branch', 'Kurunegala'),
+(7, 'South Branch', 'Matara'),
+(8, 'Ancient Branch', 'Anuradhapura'),
+(9, 'East Branch', 'Batticaloa'),
+(10, 'Harbor Branch', 'Trincomalee'),
+(11, 'Gem Branch', 'Ratnapura'),
+(12, 'Hill Branch', 'Badulla');
