@@ -151,3 +151,7 @@ begin
     );
 end //
 DELIMITER ;
+
+
+-- Test the Audit logging
+update Products set StockQuantity = 15 where ProductID = 4;
