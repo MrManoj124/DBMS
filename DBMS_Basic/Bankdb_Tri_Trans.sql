@@ -71,3 +71,17 @@ INSERT INTO Accounts VALUES
 (113, 1, 2, 22000),
 (114, 3, 1, 33000),
 (115, 5, 3, 27000);
+
+
+-- create a trigger to prevent a negative balance before inserting a new record into the account relation
+DELIMITER //
+create trigger trg_negativebalance_before_insert
+before insert on Accounts
+for each row
+begin 
+	if Balance < 0 then
+		signal sqlstate '45000'
+		set message_text = "Balance cannot be negative";
+	end if ;
+end //
+DELIMITER //
