@@ -231,3 +231,17 @@ DELIMITER ;
 
 -- Test the deletion of product that is part of existing orders
 delete from Products where ProductID = 1;
+
+
+-- Create a trigger for update the Totalamount in orders after deletion of order items
+DELIMITER //
+create trigger trg_update_total_amount_after_order_item_deletion
+after delete on Order_Items
+for each row
+begin 
+    update Orders set TotalAmount = TotalAmount - OLD.SubTotal
+    where OrderID = OLD.OrderID;
+end //
+DELIMITER ;
+
+-- 
