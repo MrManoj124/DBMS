@@ -84,3 +84,7 @@ INSERT INTO Order_Items (OrderID, ProductID, Quantity, SubTotal) VALUES
 (3, 2, 2, 3600.00),
 (3, 6, 2, 1000.00);
 
+INSERT INTO Payments (OrderID, PaymentDate, Amount, PaymentMethod) VALUES
+(1, '2026-05-20', 3000.00, 'Cash'),
+(2, '2026-05-21', 1250.00, 'Card'),
+(3, '2026-05-22', 5000.00, 'Online');
