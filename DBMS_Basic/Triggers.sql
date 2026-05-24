@@ -244,4 +244,5 @@ begin
 end //
 DELIMITER ;
 
--- 
+-- Test the total amount update after deleting order item
+delete from Order_Items where OrderItemID = 1;
