@@ -40,3 +40,14 @@ create table Order_Items(
     FOREIGN KEY (ProductID)
     REFERENCES Products(ProductID)
 );
+
+CREATE TABLE Payments (
+    PaymentID INT PRIMARY KEY AUTO_INCREMENT,
+    OrderID INT,
+    PaymentDate DATE,
+    Amount DECIMAL(10,2),
+    PaymentMethod VARCHAR(30),
+
+    FOREIGN KEY (OrderID)
+    REFERENCES Orders(OrderID)
+);
