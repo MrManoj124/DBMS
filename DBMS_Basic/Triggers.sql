@@ -168,3 +168,8 @@ begin
     where ProductID = NEW.ProductID;
 end //
 DELIMITER ;
+
+
+-- Test it with ProductID with stock 50
+-- Insert new Order Item
+INSERT INTO Order_Items (OrderID,ProductID,Quantity,SubTotal) VALUES (5,3,5,1250.00);
