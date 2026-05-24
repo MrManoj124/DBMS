@@ -51,3 +51,13 @@ CREATE TABLE Payments (
     FOREIGN KEY (OrderID)
     REFERENCES Orders(OrderID)
 );
+
+create table Inventory_Log(
+	LogID int primary key auto_increment,
+    ProductID int,
+    OldStock int,
+    NewStock int,
+    ChangeDate timestamp default current_timestamp,
+    
+    foreign key(ProductID) references Products(ProductID)
+);
