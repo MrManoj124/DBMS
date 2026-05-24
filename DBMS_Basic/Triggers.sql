@@ -212,3 +212,19 @@ DELIMITER ;
 
 -- Test the total amount update after inserting order item
 insert into Order_Items values (NULL, 1, 2, 2, 3600.00);
+
+-- create a trigger to prevent deletion of products that are part of existing orders
+DELIMITER //
+create trigger trg_prevent_product_deletion
+before delete
+on Products
+for each row
+begin 
+    declare order_count int;
+    select count(*) into order_count from Order_Items where ProductId = OLD.ProductID;
+    if order_count > 0 then
+        signal sqlstate '45000'
+        set message_text = "Cannot delete product that is part of existing orders";
+    end if;
+end //
+DELIMITER ;
