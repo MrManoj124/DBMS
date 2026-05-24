@@ -77,3 +77,10 @@ INSERT INTO Products (ProductName, Category, Price, StockQuantity) VALUES
 ('Donut', 'Dessert', 150.00, 60),
 ('Cookies Pack', 'Biscuit', 500.00, 30);
 
+INSERT INTO Order_Items (OrderID, ProductID, Quantity, SubTotal) VALUES
+(1, 1, 1, 2500.00),
+(1, 5, 2, 300.00),
+(2, 3, 5, 1250.00),
+(3, 2, 2, 3600.00),
+(3, 6, 2, 1000.00);
+
