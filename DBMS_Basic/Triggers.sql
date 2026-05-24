@@ -173,3 +173,23 @@ DELIMITER ;
 -- Test it with ProductID with stock 50
 -- Insert new Order Item
 INSERT INTO Order_Items (OrderID,ProductID,Quantity,SubTotal) VALUES (5,3,5,1250.00);
+
+
+-- Prevent Ordering more than Stock
+-- before insert trigger
+DELIMITER //
+create trigger trg_check_stock_before_order
+before insert
+on Order_Items
+for each row
+begin
+	declare current_stock int;
+    select StockQuantity
+    into current_stock from Products where ProductID = NEW.ProductID;
+    
+    if current_stock < NEW.Quantity then
+		signal sqlstate '45000'
+		set message_text = "Insuffiecient Stock";
+    end if;
+end //
+DELIMITER ;
