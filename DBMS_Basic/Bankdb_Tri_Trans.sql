@@ -1,1 +1,3 @@
-C
+create database Bankdb;
+
+use Bankdb;
