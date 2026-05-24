@@ -228,3 +228,6 @@ begin
     end if;
 end //
 DELIMITER ;
+
+-- Test the deletion of product that is part of existing orders
+delete from Products where ProductID = 1;
