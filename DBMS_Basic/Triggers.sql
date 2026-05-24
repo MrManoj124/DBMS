@@ -26,3 +26,17 @@ create table Orders(
     
     foreign key(CustomerID) references Customers(CustomerID)
 );
+
+create table Order_Items(
+	OrderItemID int primary key auto_increment,
+    OrderID int,
+    ProductID int,
+    Quantity int check (Quantity >= 0),
+    subTotal decimal(10, 2),
+    
+    FOREIGN KEY (OrderID)
+    REFERENCES Orders(OrderID),
+
+    FOREIGN KEY (ProductID)
+    REFERENCES Products(ProductID)
+);
