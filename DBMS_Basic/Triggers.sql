@@ -209,3 +209,6 @@ begin
     where OrderID = NEW.OrderID;
 end //
 DELIMITER ;
+
+-- Test the total amount update after inserting order item
+insert into Order_Items values (NULL, 1, 2, 2, 3600.00);
