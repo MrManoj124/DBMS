@@ -99,3 +99,18 @@ INSERT INTO Payments (OrderID, PaymentDate, Amount, PaymentMethod) VALUES
 -- begin 
 	-- Query
 -- end ;
+
+
+-- Before update trigger
+DELIMITER //
+create trigger 	prevent_neg_stock
+before update 
+on Products 
+for each row
+begin 
+	if NEW.StockQuantity < 0 then
+		signal sqlstate '14000'
+		set message_text = "Quantity cannot be negative";
+    end if;
+end //
+DELIMITER ;
