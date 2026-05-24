@@ -69,3 +69,11 @@ INSERT INTO Customers (CustomerName, Phone, City) VALUES
 ('Nimal', '0754567890', 'Jaffna'),
 ('Suresh', '0761112233', 'Galle');
 
+INSERT INTO Products (ProductName, Category, Price, StockQuantity) VALUES
+('Chocolate Cake', 'Cake', 2500.00, 20),
+('Butter Cake', 'Cake', 1800.00, 15),
+('Chicken Bun', 'Snack', 250.00, 50),
+('Fish Bun', 'Snack', 220.00, 40),
+('Donut', 'Dessert', 150.00, 60),
+('Cookies Pack', 'Biscuit', 500.00, 30);
+
