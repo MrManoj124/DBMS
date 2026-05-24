@@ -196,3 +196,16 @@ DELIMITER ;
 
 -- Test the before insert trigger
 insert into Order_Items values (NULL, 1, 1, 100, 12500.00);
+
+
+-- create a trigger to update total amount in orders after inserting order items
+DELIMITER //
+create trigger trg_update_total_amount_after_order_item
+after insert
+on Order_Items
+for each row
+begin
+    update Orders set TotalAmount = TotalAmount + NEW.SubTotal
+    where OrderID = NEW.OrderID;
+end //
+DELIMITER ;
