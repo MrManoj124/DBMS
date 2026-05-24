@@ -88,3 +88,14 @@ INSERT INTO Payments (OrderID, PaymentDate, Amount, PaymentMethod) VALUES
 (1, '2026-05-20', 3000.00, 'Cash'),
 (2, '2026-05-21', 1250.00, 'Card'),
 (3, '2026-05-22', 5000.00, 'Online');
+
+
+-- Syntax for triggers
+-- create trigger delete_with_trigger
+-- before | after
+-- insert | update | delete
+-- on table
+-- for each row
+-- begin 
+	-- Query
+-- end ;
