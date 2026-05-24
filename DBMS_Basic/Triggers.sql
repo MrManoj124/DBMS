@@ -61,3 +61,11 @@ create table Inventory_Log(
     
     foreign key(ProductID) references Products(ProductID)
 );
+
+
+INSERT INTO Customers (CustomerName, Phone, City) VALUES
+('Manoj', '0771234567', 'Colombo'),
+('Kamal', '0719876543', 'Kandy'),
+('Nimal', '0754567890', 'Jaffna'),
+('Suresh', '0761112233', 'Galle');
+
