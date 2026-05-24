@@ -114,3 +114,6 @@ begin
     end if;
 end //
 DELIMITER ;
+
+-- Test the updation with trigger
+update Products set StockQuantity = -2 where ProductID = 1;
