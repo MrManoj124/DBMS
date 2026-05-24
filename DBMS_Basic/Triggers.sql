@@ -17,3 +17,12 @@ create table Products(
  Price DECIMAL (10, 2) NOT NULL CHECK (Price > 0),
  StockQuantity int not null check (StockQuantity >= 0)
 );
+
+create table Orders(
+	OrderID int primary key auto_increment,
+    CustomerID int,
+    OrderDate date,
+    TotalAmount decimal(10, 2),
+    
+    foreign key(CustomerID) references Customers(CustomerID)
+);
