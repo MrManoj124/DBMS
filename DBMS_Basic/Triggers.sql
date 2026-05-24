@@ -155,3 +155,16 @@ DELIMITER ;
 
 -- Test the Audit logging
 update Products set StockQuantity = 15 where ProductID = 4;
+
+-- Auto reduce stock after order
+-- After insert trigger
+DELIMITER //
+create trigger trg_red_stock_after_order
+after insert
+on Order_Items
+for each row
+begin 
+	update Products set StockQuantity = StockQuantity - NEW.Quantity
+    where ProductID = NEW.ProductID;
+end //
+DELIMITER ;
