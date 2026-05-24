@@ -134,3 +134,20 @@ DELIMITER ;
 
 -- test the price with update triggers
 update Products set Price = -51000.00 where ProductID = 1;
+
+
+-- Log stock changes automatically
+-- Audit logging
+DELIMITER //
+create trigger trg_log_stock_changes
+after update
+on Products
+FOR EACH ROW
+begin
+	insert into Inventory_Log(ProductID, OldStock, NewStock)values(
+    OLD.ProductID,
+    OLD.StockQuantity,
+    NEW.StockQuantity
+    );
+end //
+DELIMITER ;
