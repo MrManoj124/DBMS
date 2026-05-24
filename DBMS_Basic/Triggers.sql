@@ -193,3 +193,6 @@ begin
     end if;
 end //
 DELIMITER ;
+
+-- Test the before insert trigger
+insert into Order_Items values (NULL, 1, 1, 100, 12500.00);
