@@ -131,3 +131,6 @@ begin
     end if;
 end //
 DELIMITER ;
+
+-- test the price with update triggers
+update Products set Price = -51000.00 where ProductID = 1;
