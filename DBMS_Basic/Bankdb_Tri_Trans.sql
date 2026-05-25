@@ -185,3 +185,14 @@ BEGIN
         SET MESSAGE_TEXT = 'Branch does not exist';
     END IF;
 END;
+
+-- 10. Limit balance increase ≤ 10x
+CREATE TRIGGER trg_limit_balance_increase
+BEFORE UPDATE ON Accounts
+FOR EACH ROW
+BEGIN
+    IF NEW.Balance > OLD.Balance * 10 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Balance increase exceeds limit';
+    END IF;
+END;
