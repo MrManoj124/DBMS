@@ -174,3 +174,14 @@ BEGIN
         SET MESSAGE_TEXT = 'CustomerID cannot be changed';
     END IF;
 END;
+
+-- 9. Ensure branch exists (UPDATE)
+CREATE TRIGGER trg_check_branch_update
+BEFORE UPDATE ON Accounts
+FOR EACH ROW
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM Branches WHERE BranchID = NEW.BranchID) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Branch does not exist';
+    END IF;
+END;
