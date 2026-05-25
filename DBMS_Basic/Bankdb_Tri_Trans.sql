@@ -143,3 +143,11 @@ CREATE TABLE Customer_Log (
     Action VARCHAR(50),
     LogTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TRIGGER trg_log_customer_insert
+AFTER INSERT ON Customers
+FOR EACH ROW
+BEGIN
+    INSERT INTO Customer_Log(CustomerID, Action)
+    VALUES (NEW.CustomerID, 'Customer Created');
+END;
