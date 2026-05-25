@@ -135,3 +135,11 @@ BEGIN
     INSERT INTO Account_Log(AccountID, Action)
     VALUES (NEW.AccountID, 'Account Created');
 END;
+
+-- 6. Log new customer
+CREATE TABLE Customer_Log (
+    LogID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerID INT,
+    Action VARCHAR(50),
+    LogTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
