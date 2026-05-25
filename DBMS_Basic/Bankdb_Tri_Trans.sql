@@ -118,3 +118,13 @@ BEGIN
         SET MESSAGE_TEXT = 'Branch does not exist';
     END IF;
 END;
+
+
+-- 5. Log new account creation
+CREATE TABLE Account_Log (
+    LogID INT AUTO_INCREMENT PRIMARY KEY,
+    AccountID INT,
+    Action VARCHAR(50),
+    LogTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
