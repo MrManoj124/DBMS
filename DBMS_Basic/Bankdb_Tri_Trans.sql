@@ -151,3 +151,14 @@ BEGIN
     INSERT INTO Customer_Log(CustomerID, Action)
     VALUES (NEW.CustomerID, 'Customer Created');
 END;
+
+-- 7. Alert if balance > 100,000
+CREATE TRIGGER trg_high_balance_alert
+AFTER INSERT ON Accounts
+FOR EACH ROW
+BEGIN
+    IF NEW.Balance > 100000 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'High-value account created';
+    END IF;
+END;
