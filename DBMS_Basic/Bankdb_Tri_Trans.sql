@@ -85,3 +85,13 @@ begin
 	end if ;
 end //
 DELIMITER //
+
+-- 2. Set default balance if NULL
+CREATE TRIGGER trg_default_balance
+BEFORE INSERT ON Accounts
+FOR EACH ROW
+BEGIN
+    IF NEW.Balance IS NULL THEN
+        SET NEW.Balance = 0;
+    END IF;
+END;
