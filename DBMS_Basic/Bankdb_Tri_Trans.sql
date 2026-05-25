@@ -107,3 +107,14 @@ BEGIN
         SET MESSAGE_TEXT = 'Customer does not exist';
     END IF;
 END;
+
+-- 4. Ensure BranchID exists
+CREATE TRIGGER trg_check_branch
+BEFORE INSERT ON Accounts
+FOR EACH ROW
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM Branches WHERE BranchID = NEW.BranchID) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Branch does not exist';
+    END IF;
+END;
