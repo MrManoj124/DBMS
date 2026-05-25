@@ -162,3 +162,15 @@ BEGIN
         SET MESSAGE_TEXT = 'High-value account created';
     END IF;
 END;
+
+
+-- 8. Prevent CustomerID change
+CREATE TRIGGER trg_prevent_customer_change
+BEFORE UPDATE ON Customers
+FOR EACH ROW
+BEGIN
+    IF OLD.CustomerID <> NEW.CustomerID THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'CustomerID cannot be changed';
+    END IF;
+END;
