@@ -128,3 +128,10 @@ CREATE TABLE Account_Log (
     LogTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TRIGGER trg_log_account_insert
+AFTER INSERT ON Accounts
+FOR EACH ROW
+BEGIN
+    INSERT INTO Account_Log(AccountID, Action)
+    VALUES (NEW.AccountID, 'Account Created');
+END;
