@@ -95,3 +95,15 @@ BEGIN
         SET NEW.Balance = 0;
     END IF;
 END;
+
+
+-- 3. Ensure CustomerID exists
+CREATE TRIGGER trg_check_customer
+BEFORE INSERT ON Accounts
+FOR EACH ROW
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM Customers WHERE CustomerID = NEW.CustomerID) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Customer does not exist';
+    END IF;
+END;
