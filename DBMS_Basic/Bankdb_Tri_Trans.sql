@@ -196,3 +196,12 @@ BEGIN
         SET MESSAGE_TEXT = 'Balance increase exceeds limit';
     END IF;
 END;
+
+-- 11. Log account updates
+CREATE TRIGGER trg_log_account_update
+AFTER UPDATE ON Accounts
+FOR EACH ROW
+BEGIN
+    INSERT INTO Account_Log(AccountID, Action)
+    VALUES (NEW.AccountID, 'Account Updated');
+END;
