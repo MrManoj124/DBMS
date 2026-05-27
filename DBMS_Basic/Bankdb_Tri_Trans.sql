@@ -231,14 +231,14 @@ DELIMITER ;
 
 -- 14.Log branch change
 DELIMITER //
-create trigger trg_log_brach_change
-after update on Accounts
-for each row
-begin
-    if OLD.BranchID <> NEW.BranchID then
+CREATE TRIGGER trg_log_branch_change
+AFTER UPDATE ON Accounts
+FOR EACH ROW
+BEGIN
+    IF OLD.BranchID <> NEW.BranchID THEN
         INSERT INTO Account_Log(AccountID, Action)
-        values (NEW.AccountID, 'Branch Changed');
-    end if;
-end //
+        VALUES (NEW.AccountID, 'Branch Changed');
+    END IF;
+END //
 DELIMITER ;
 
