@@ -347,3 +347,16 @@ BEGIN
     VALUES (OLD.BranchID, 'Branch Deleted');
 END //
 DELIMITER ;
+
+-- 23. Alert high-value account deletion
+DELIMITER //
+CREATE TRIGGER trg_high_value_delete
+AFTER DELETE ON Accounts
+FOR EACH ROW
+BEGIN
+    IF OLD.Balance > 100000 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'High-value account deleted';
+    END IF;
+END //
+DELIMITER ;
