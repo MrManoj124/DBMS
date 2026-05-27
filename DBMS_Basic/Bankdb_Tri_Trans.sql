@@ -268,3 +268,16 @@ BEGIN
     END IF;
 END //
 DELIMITER ;
+
+
+-- 17. Backup before deleting account
+DELIMITER //
+CREATE TABLE Account_Backup AS SELECT * FROM Accounts WHERE 1=0;
+
+CREATE TRIGGER trg_backup_account
+BEFORE DELETE ON Accounts
+FOR EACH ROW
+BEGIN
+    INSERT INTO Account_Backup VALUES (OLD.AccountID, OLD.CustomerID, OLD.BranchID, OLD.Balance);
+END //
+DELIMITER ;
