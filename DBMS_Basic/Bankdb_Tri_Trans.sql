@@ -281,3 +281,16 @@ BEGIN
     INSERT INTO Account_Backup VALUES (OLD.AccountID, OLD.CustomerID, OLD.BranchID, OLD.Balance);
 END //
 DELIMITER ;
+
+-- 18. Prevent deleting branches with accounts
+DELIMITER //
+CREATE TRIGGER trg_prevent_branch_delete
+BEFORE DELETE ON Branches
+FOR EACH ROW
+BEGIN
+    IF EXISTS (SELECT 1 FROM Accounts WHERE BranchID = OLD.BranchID) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Branch has accounts';
+    END IF;
+END //
+DELIMITER ;
