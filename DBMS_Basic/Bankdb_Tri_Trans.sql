@@ -337,3 +337,13 @@ BEGIN
 END //
 DELIMITER ;
 
+-- 22. Log branch deletion
+DELIMITER //
+CREATE TRIGGER trg_log_branch_delete
+AFTER DELETE ON Branches
+FOR EACH ROW
+BEGIN
+    INSERT INTO Branch_Log(BranchID, Action)
+    VALUES (OLD.BranchID, 'Branch Deleted');
+END //
+DELIMITER ;
