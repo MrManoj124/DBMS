@@ -242,3 +242,15 @@ BEGIN
 END //
 DELIMITER ;
 
+-- 15. Prevent deleting active accounts
+DELIMITER //
+CREATE TRIGGER trg_prevent_delete_account
+BEFORE DELETE ON Accounts
+FOR EACH ROW
+BEGIN
+    IF OLD.Balance > 0 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Cannot delete active account';
+    END IF;
+END //
+DELIMITER ;
