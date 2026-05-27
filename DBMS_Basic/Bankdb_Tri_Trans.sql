@@ -302,3 +302,13 @@ CREATE TABLE Branch_Log (
     Action VARCHAR(50),
     LogTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+DELIMITER //
+CREATE TRIGGER trg_log_branch_delete_attempt
+BEFORE DELETE ON Branches
+FOR EACH ROW
+BEGIN
+    INSERT INTO Branch_Log(BranchID, Action)
+    VALUES (OLD.BranchID, 'Delete Attempt');
+END //
+DELIMITER ;
