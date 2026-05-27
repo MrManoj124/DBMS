@@ -254,3 +254,17 @@ BEGIN
     END IF;
 END //
 DELIMITER ;
+
+
+-- 16. Prevent deleting customers with accounts
+DELIMITER //
+CREATE TRIGGER trg_prevent_customer_delete
+BEFORE DELETE ON Customers
+FOR EACH ROW
+BEGIN
+    IF EXISTS (SELECT 1 FROM Accounts WHERE CustomerID = OLD.CustomerID) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Customer has accounts';
+    END IF;
+END //
+DELIMITER ;
