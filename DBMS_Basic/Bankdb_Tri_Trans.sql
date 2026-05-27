@@ -294,3 +294,11 @@ BEGIN
     END IF;
 END //
 DELIMITER ;
+
+-- 19. Log delete attempts (branch)
+CREATE TABLE Branch_Log (
+    LogID INT AUTO_INCREMENT PRIMARY KEY,
+    BranchID INT,
+    Action VARCHAR(50),
+    LogTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
