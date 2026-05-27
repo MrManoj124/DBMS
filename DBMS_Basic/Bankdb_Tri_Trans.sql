@@ -215,3 +215,16 @@ BEGIN
     INSERT INTO Customer_Log(CustomerID, Action)
     VALUES (NEW.CustomerID, 'Customer Updated');
 END;
+
+-- 13. Alert large withdrawals (>100,000)
+DELIMITER //
+CREATE TRIGGER trg_large_withdrawal
+AFTER UPDATE ON Accounts
+FOR EACH ROW
+BEGIN
+    IF OLD.Balance - NEW.Balance > 100000 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Large withdrawal detected';
+    END IF;
+END //
+DELIMITER ;
