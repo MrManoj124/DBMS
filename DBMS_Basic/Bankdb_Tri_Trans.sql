@@ -205,3 +205,13 @@ BEGIN
     INSERT INTO Account_Log(AccountID, Action)
     VALUES (NEW.AccountID, 'Account Updated');
 END;
+
+
+-- 12. Log customer update
+CREATE TRIGGER trg_log_customer_update
+AFTER UPDATE ON Customers
+FOR EACH ROW
+BEGIN
+    INSERT INTO Customer_Log(CustomerID, Action)
+    VALUES (NEW.CustomerID, 'Customer Updated');
+END;
