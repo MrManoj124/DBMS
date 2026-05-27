@@ -322,3 +322,12 @@ BEGIN
     INSERT INTO Account_Log(AccountID, Action)
     VALUES (OLD.AccountID, 'Account Deleted');
 END;
+
+-- 21. Log customer deletion
+CREATE TRIGGER trg_log_customer_delete
+AFTER DELETE ON Customers
+FOR EACH ROW
+BEGIN
+    INSERT INTO Customer_Log(CustomerID, Action)
+    VALUES (OLD.CustomerID, 'Customer Deleted');
+END;
