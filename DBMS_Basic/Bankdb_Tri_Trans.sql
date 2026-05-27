@@ -312,3 +312,13 @@ BEGIN
     VALUES (OLD.BranchID, 'Delete Attempt');
 END //
 DELIMITER ;
+
+
+-- 20. Log account deletion
+CREATE TRIGGER trg_log_account_delete
+AFTER DELETE ON Accounts
+FOR EACH ROW
+BEGIN
+    INSERT INTO Account_Log(AccountID, Action)
+    VALUES (OLD.AccountID, 'Account Deleted');
+END;
