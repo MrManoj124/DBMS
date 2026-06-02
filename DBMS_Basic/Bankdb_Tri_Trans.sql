@@ -360,3 +360,17 @@ BEGIN
     END IF;
 END //
 DELIMITER ;
+
+
+// 24.create a trigger to prevent a negative balance before updating a record in the account relation
+DELIMITER //
+CREATE TRIGGER trg_negativebalance_before_update
+BEFORE UPDATE ON Accounts
+FOR EACH ROW
+BEGIN   
+    IF NEW.Balance < 0 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = "Balance cannot be negative";
+    END IF;
+END //
+DELIMITER ;
