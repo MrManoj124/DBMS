@@ -374,3 +374,20 @@ BEGIN
     END IF;
 END //
 DELIMITER ;
+
+
+// 25.create a trigger to prevent a negative balance between accounts during a transfer 
+DELIMITER //
+create trigger trg_negativebalance_transfer
+update Accounts
+for each row
+begin 
+    if NEW.Balance < 0 then
+        signal sqlstate '45000'
+        set message_text = " Balance cannot be negative after transfer";
+    end if;
+end //
+DELIMITER ;
+
+
+// 
