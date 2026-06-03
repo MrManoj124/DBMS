@@ -121,3 +121,8 @@ delete from Vehicles where VehicleID = 3;
 
 -- update a rental record to set return date 
 update Rentals set ReturnDate = '2026-03-20' where RentalID = 2;
+
+-- Update a customer's email which can be rent a vehicle
+update Customers set Email = 'Kanomithan@gmail.com' where CustomerID = 4;
+
+
