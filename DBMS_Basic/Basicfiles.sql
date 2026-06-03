@@ -112,3 +112,6 @@ UPDATE Vehicles SET Status = 'Rented' WHERE VehicleID = 4;
 --DELETE Operation--
 DELETE FROM Vehiles WHERE VehicleID = 4;
 
+-- Delete a Customer and associated Rental and payment records
+delete from Customers where CustomerID = 2;
+
