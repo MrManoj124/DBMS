@@ -115,3 +115,5 @@ DELETE FROM Vehiles WHERE VehicleID = 4;
 -- Delete a Customer and associated Rental and payment records
 delete from Customers where CustomerID = 2;
 
+-- Delete a Vahicle and assosiated Rental and payment records
+delete from Vehicles where VehicleID = 3;
