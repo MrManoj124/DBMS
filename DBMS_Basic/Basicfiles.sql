@@ -129,3 +129,7 @@ update Customers set Email = 'Kanomithan@gmail.com' where CustomerID = 4;
 select c.Name, v.Brand, r.RentDate from Rentals r 
 join Customers c on r.CustomerID = c.CustomerID 
 join Vehicles v on r.VehicleID = v.VehicleID;
+
+-- Add a new column to the Vehicles table to store rental price per day
+ALTER TABLE Vehicles ADD COLUMN RentalPrice DECIMAL(10,2);
+
