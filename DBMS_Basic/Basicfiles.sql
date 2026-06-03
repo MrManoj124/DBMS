@@ -117,3 +117,7 @@ delete from Customers where CustomerID = 2;
 
 -- Delete a Vahicle and assosiated Rental and payment records
 delete from Vehicles where VehicleID = 3;
+
+
+-- update a rental record to set return date 
+update Rentals set ReturnDate = '2026-03-20' where RentalID = 2;
