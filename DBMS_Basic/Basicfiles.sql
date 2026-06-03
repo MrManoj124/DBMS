@@ -125,4 +125,7 @@ update Rentals set ReturnDate = '2026-03-20' where RentalID = 2;
 -- Update a customer's email which can be rent a vehicle
 update Customers set Email = 'Kanomithan@gmail.com' where CustomerID = 4;
 
-
+-- Add a join query to get customer name, vehicle brand, and rent date for all rentals
+select c.Name, v.Brand, r.RentDate from Rentals r 
+join Customers c on r.CustomerID = c.CustomerID 
+join Vehicles v on r.VehicleID = v.VehicleID;
