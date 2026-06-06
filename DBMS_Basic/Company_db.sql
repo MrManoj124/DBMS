@@ -51,3 +51,12 @@ INSERT INTO Parts VALUES
 ('P4','Screw','Red',14,'London'),
 ('P5','Cam','Blue',12,'Paris'),
 ('P6','Cog','Red',19,'London');
+
+INSERT INTO Projects VALUES
+('J1','Sorter','Paris'),
+('J2','Punch','Rome'),
+('J3','Reader','Athens'),
+('J4','Console','Athens'),
+('J5','Collator','London'),
+('J6','Terminal','Oslo'),
+('J7','Tape','London');
