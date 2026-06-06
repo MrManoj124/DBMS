@@ -92,3 +92,6 @@ DESCRIBE Suppliers;
 DESCRIBE Parts;
 DESCRIBE Projects;
 DESCRIBE Shipments;
+
+SELECT * FROM Projects
+WHERE PrCity = 'London';
