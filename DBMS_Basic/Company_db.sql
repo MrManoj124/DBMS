@@ -24,3 +24,15 @@ CREATE TABLE Projects (
     PrName VARCHAR(50),
     PrCity VARCHAR(50)
 );
+
+-- create Shipments table
+CREATE TABLE Shipments (
+    SID VARCHAR(5),
+    PID VARCHAR(5),
+    PrID VARCHAR(5),
+    Quantity INT,
+    PRIMARY KEY (SID, PID, PrID),
+    FOREIGN KEY (SID) REFERENCES Suppliers(SID),
+    FOREIGN KEY (PID) REFERENCES Parts(PID),
+    FOREIGN KEY (PrID) REFERENCES Projects(PrID)
+);
