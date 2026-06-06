@@ -1,0 +1,2 @@
+CREATE DATABASE SPJ_Database;
+USE SPJ_Database;
