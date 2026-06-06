@@ -86,3 +86,9 @@ INSERT INTO Shipments VALUES
 ('S5','P4','J4',800),
 ('S5','P5','J4',400),
 ('S5','P6','J4',500);
+
+
+DESCRIBE Suppliers;
+DESCRIBE Parts;
+DESCRIBE Projects;
+DESCRIBE Shipments;
