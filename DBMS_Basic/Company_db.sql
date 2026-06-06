@@ -16,4 +16,11 @@ CREATE TABLE Parts (
     Colour VARCHAR(20),
     Weight INT,
     PCity VARCHAR(50)
-)
+);
+
+-- create Projects table
+CREATE TABLE Projects (
+    PrID VARCHAR(5) PRIMARY KEY,
+    PrName VARCHAR(50),
+    PrCity VARCHAR(50)
+);
