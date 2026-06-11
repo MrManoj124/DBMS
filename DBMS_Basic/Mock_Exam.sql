@@ -8,4 +8,16 @@ use Vehicle_Rental;
 
 -- create table for the database
 -- create a Branch table
-create table 
+create table Branch(
+    Branch_ID int auto_increment primary key,
+    Branch_Name varchar(50) not null,
+    City varchar(30) not null
+);
+
+-- create a Vehicle table
+create table Vehicle(
+    Vehicle_ID varchar(30) primary key,
+    Vehicle_Name varchar(50) not null,
+    Type varchar(30) not null,
+    Daily_Rate decimal(10, 2)
+);
