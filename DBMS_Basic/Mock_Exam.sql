@@ -24,3 +24,12 @@ create table Vehicle(
 
     foreign key(Branch_ID) references Branch(Branch_ID)
 );
+
+-- create Customer table
+create table Customer(
+    Customer_ID varchar(30) primary key,
+    First_Name varchar(50) not null, 
+    Last_Name varchar(50) not null,
+    Phone varchar not null,
+);
+
