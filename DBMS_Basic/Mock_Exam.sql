@@ -16,7 +16,7 @@ create table Branch(
 
 -- create a Vehicle table
 create table Vehicle(
-    Vehicle_ID varchar(30) primary key,
+    Vehicle_ID varchar(50) primary key,
     Vehicle_Name varchar(50) not null,
     Type varchar(30) not null,
     Daily_Rate decimal(10, 2) check(Daily_Rate > 0),
@@ -33,3 +33,14 @@ create table Customer(
     Phone varchar not null,
 );
 
+-- create Rental table
+create table Rental(
+    Rental_ID varchar(50) primary key,
+    Customer_ID varchar(50) not null,
+    Vehicle_ID varchar(50) not null,
+    Rental_Date date,
+    Days int check(Days > 0),
+
+    foreign key(Customer_ID) references Customer(Customer_ID),
+    foreign key(Vehicle_ID) references Vehicle(Vehicle_ID) 
+);
