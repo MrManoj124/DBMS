@@ -19,5 +19,8 @@ create table Vehicle(
     Vehicle_ID varchar(30) primary key,
     Vehicle_Name varchar(50) not null,
     Type varchar(30) not null,
-    Daily_Rate decimal(10, 2)
+    Daily_Rate decimal(10, 2) check(Daily_Rate > 0),
+    Branch_ID int ,
+
+    foreign key(Branch_ID) references Branch(Branch_ID)
 );
