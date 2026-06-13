@@ -47,4 +47,8 @@ create table Rental(
 
 
 -- B . Practice with Views
--- 
+-- Display Customer name and rented Vehicle details.
+create view Customer_Rental_View as 
+select c.FirstName, c.LastName, v.Vehicle_Name, r.Rental_Date, r.Days
+from Rental r join Customer c on r.Customer_ID = c.Customer_ID
+join Vehicle v on r.Vehicle_ID = v.Vehicle_ID=v.Vehicle_ID;
