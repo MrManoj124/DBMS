@@ -44,3 +44,7 @@ create table Rental(
     foreign key(Customer_ID) references Customer(Customer_ID),
     foreign key(Vehicle_ID) references Vehicle(Vehicle_ID) 
 );
+
+
+-- B . Practice with Views
+-- 
