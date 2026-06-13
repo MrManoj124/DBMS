@@ -66,3 +66,7 @@ v.Type from Branch b join Vehicle v on b.Branch_ID = v.Branch_ID;
 -- Create index on customer names.
 create index idx_customer_name
 on Customer(First_Name, Last_Name);
+
+-- create index on Vehicle_Name
+create index idx_vehicle_name
+on Vehicle(Vehicle_Name);
