@@ -52,3 +52,7 @@ create view Customer_Rental_View as
 select c.FirstName, c.LastName, v.Vehicle_Name, r.Rental_Date, r.Days
 from Rental r join Customer c on r.Customer_ID = c.Customer_ID
 join Vehicle v on r.Vehicle_ID = v.Vehicle_ID=v.Vehicle_ID;
+
+-- Display vehicles rented for more than 3 days.
+create view Long_Rentals as select * from Rental where Days > 3;
+
