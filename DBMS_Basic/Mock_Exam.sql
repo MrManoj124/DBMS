@@ -56,3 +56,7 @@ join Vehicle v on r.Vehicle_ID = v.Vehicle_ID=v.Vehicle_ID;
 -- Display vehicles rented for more than 3 days.
 create view Long_Rentals as select * from Rental where Days > 3;
 
+
+-- Display branch name and vehicle details.
+create view Branch_Vehicles_View as select b.Branch_Name, v.Vehicle_Name, 
+v.Type from Branch b join Vehicle v on b.Branch_ID = v.Branch_ID;
